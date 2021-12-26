@@ -1,22 +1,35 @@
+let currentPlayer = "not assigned";
 
-let buttons = document.getElementsByClassName('tile-btn')
+//Add eventlistener first when DOM is finish loading. 
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByClassName('tile-btn')
 
-for (button of buttons) {
-    button.addEventListener('click', showButton);
-}
+    for (button of buttons) {
+        button.addEventListener('click', setPlayerOnBtn);
+    }
+
+});
 
 
+// Using the global variable currentPlayer to set the player on the button. 
+ 
 function setPlayerOnBtn() {
-    this.innerHTML = "X";
+
+    if (currentPlayer === 'X') {
+        this.innerHTML = 'X';
+        currentPlayer = 'O';
+    } else {
+        this.innerHTML = 'O';
+        currentPlayer = 'X';
+    }
 
 }
 
-// Randomize which player if first out to play X or O. 
-function getRandomPlayers() {
+// Randomize which player is first out to play X or O. 
+function getRandomPlayer() {
     const players = ['X', 'O'];
     const randomPlayer = Math.floor(Math.random() * players.length);
-    console.log(players[randomPlayer]);
-
+    currentPlayer = (players[randomPlayer]);
 }
 
-getRandomPlayers();
+getRandomPlayer();

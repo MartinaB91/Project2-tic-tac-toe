@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Eventlisteners click for game board buttons
     let buttons = document.getElementsByClassName('tile-btn');
+    
     for (button of buttons) {
         button.addEventListener('click', gameBoardBtnClick);
+        button.disabled = true; //To make the buttons unclickable before game is started. 
     }
-    
+  
     // Initialize current player.
     getRandomPlayer();
 
@@ -20,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * Main function is called every time a button on game board is clicked. */
 function gameBoardBtnClick () {
     let button = this;
-    setPlayerOnBtn(button);
+    button.disabled = true;
+    setPlayerOnBtn(button)
     checkIfWin();
     changePlayer();
 }
@@ -80,9 +83,17 @@ function checkIfWin() {
     winScenarios(btn1, btn5, btn9); // Diagonally left to bottom
 }
 
-//Hides the start button
+//Hides the start button and make the buttons clickable.
 function startGame() {
    document.getElementById('start-btn').style.display="none";  
+   let buttons = document.getElementsByClassName('tile-btn');
+
+   for (button of buttons) {
+    button.disabled = false;
+  
+}
+
+
 
 }
 

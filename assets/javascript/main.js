@@ -1,25 +1,31 @@
 let currentPlayer = "not assigned";
 
-//Add eventlistener first when DOM is finish loading. 
+// Add eventlistener first when DOM is finish loading. 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName('tile-btn')
 
     for (button of buttons) {
-        button.addEventListener('click', setPlayerOnBtn);
+        button.addEventListener('click', gameBoardBtnClick);
     }
+    
+    // Initialize current player.
+    getRandomPlayer();
 
 });
 
+function gameBoardBtnClick () {
+    let button = this;
+    setPlayerOnBtn(button);
+}
 
 // Using the global variable currentPlayer to set the player on the button. 
- 
-function setPlayerOnBtn() {
+function setPlayerOnBtn(button) {
 
     if (currentPlayer === 'X') {
-        this.innerHTML = 'X';
+        button.innerHTML = 'X';
         currentPlayer = 'O';
     } else {
-        this.innerHTML = 'O';
+        button.innerHTML = 'O';
         currentPlayer = 'X';
     }
 
@@ -32,4 +38,3 @@ function getRandomPlayer() {
     currentPlayer = (players[randomPlayer]);
 }
 
-getRandomPlayer();

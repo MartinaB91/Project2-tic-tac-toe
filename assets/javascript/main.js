@@ -2,8 +2,11 @@ let currentPlayer = "not assigned";
 
 // Add eventlistener first when DOM is finish loading. 
 document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByClassName('tile-btn');
+    // Eventlistener click for start button
+    document.getElementById('start-btn').addEventListener('click', startGame);
 
+    // Eventlisteners click for game board buttons
+    let buttons = document.getElementsByClassName('tile-btn');
     for (button of buttons) {
         button.addEventListener('click', gameBoardBtnClick);
     }
@@ -13,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+/**Main function that calls other functions and desides the order they are executed in. 
+ * Main function is called every time a button on game board is clicked. */
 function gameBoardBtnClick () {
     let button = this;
     setPlayerOnBtn(button);
@@ -73,5 +78,11 @@ function checkIfWin() {
     winScenarios(btn3, btn6, btn9); // Second row vertical
     winScenarios(btn3, btn5, btn7); // Diagonally right to bottom
     winScenarios(btn1, btn5, btn9); // Diagonally left to bottom
+}
+
+//Hides the start button
+function startGame() {
+   document.getElementById('start-btn').style.display="none";  
+
 }
 

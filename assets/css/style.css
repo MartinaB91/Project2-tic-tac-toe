@@ -6,6 +6,19 @@ h1 {
     margin: auto;
     width: 30%;
     background-color: pink;
+    position: relative;
+}
+
+/* Styling start button */
+#start-btn {
+    border: none;
+    background: none;
+    color: green;
+    font-size: 400%;
+    font-weight: bold;
+    position: absolute;
+    top: 35%;
+    right: 28%;
 }
 
 .tile-btn {
@@ -24,3 +37,4 @@ h1 {
     padding-top: 100%;
  
 }
+

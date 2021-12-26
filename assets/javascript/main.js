@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function gameBoardBtnClick () {
     let button = this;
     setPlayerOnBtn(button);
-    checkIfWinn();
+    checkIfWin();
     changePlayer();
 }
 

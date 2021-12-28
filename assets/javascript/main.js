@@ -69,7 +69,7 @@ function checkIfWin() {
 
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
-            alert('Vinst');
+            alert(`Congratulations player ${currentPlayer} you won!`);
         }
     }
 
@@ -85,6 +85,7 @@ function checkIfWin() {
 
 //Hides the start button and make the buttons clickable.
 function startGame() {
+
    document.getElementById('start-btn').style.display="none";  
    let buttons = document.getElementsByClassName('tile-btn');
 
@@ -93,7 +94,8 @@ function startGame() {
   
 }
 
-
-
 }
 
+// function restartGame {
+//     document.getElementById('start-btn')  //Hämta knapp för att ändra text på den och visa den igen. 
+// }S

@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Eventlisteners click for game board buttons
     let buttons = document.getElementsByClassName('tile-btn');
-    
+
     for (button of buttons) {
         button.addEventListener('click', gameBoardBtnClick);
         button.disabled = true; //To make the buttons unclickable before game is started. 
     }
-  
+
     // Initialize current player.
     getRandomPlayer();
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**Main function that calls other functions and desides the order they are executed in. 
  * Main function is called every time a button on game board is clicked. */
-function gameBoardBtnClick () {
+function gameBoardBtnClick() {
     let button = this;
     button.disabled = true;
     setPlayerOnBtn(button)
@@ -39,7 +39,7 @@ function getRandomPlayer() {
 function setPlayerOnBtn(button) {
 
     if (currentPlayer === 'X') {
-        button.innerHTML = 'X';   
+        button.innerHTML = 'X';
     } else {
         button.innerHTML = 'O';
     }
@@ -70,7 +70,9 @@ function checkIfWin() {
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
             alert(`Congratulations player ${currentPlayer} you won!`);
+            restartGame();
         }
+
     }
 
     winScenarios(btn1, btn2, btn3); // First row horizontal
@@ -81,21 +83,31 @@ function checkIfWin() {
     winScenarios(btn3, btn6, btn9); // Second row vertical
     winScenarios(btn3, btn5, btn7); // Diagonally right to bottom
     winScenarios(btn1, btn5, btn9); // Diagonally left to bottom
+
 }
 
 //Hides the start button and make the buttons clickable.
 function startGame() {
 
-   document.getElementById('start-btn').style.display="none";  
-   let buttons = document.getElementsByClassName('tile-btn');
+    document.getElementById('start-btn').style.display = "none";
+    let buttons = document.getElementsByClassName('tile-btn');
 
-   for (button of buttons) {
-    button.disabled = false;
-  
+    for (button of buttons) {
+        button.disabled = false;
+    }
 }
 
-}
+// Prepare the game for restart by reseting buttons. 
+function restartGame() {
 
-// function restartGame {
-//     document.getElementById('start-btn')  //Hämta knapp för att ändra text på den och visa den igen. 
-// }S
+    let restartButton = document.getElementById('start-btn');
+    restartButton.innerHTML = "RESTART";
+    restartButton.style.display = "block";
+    let buttons = document.getElementsByClassName('tile-btn');
+
+    for (button of buttons) {
+        button.disabled = true;
+        button.innerHTML = "";
+    }
+
+}

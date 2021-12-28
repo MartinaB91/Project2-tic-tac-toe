@@ -73,6 +73,7 @@ function checkIfWin() {
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
             alert(`Congratulations player ${currentPlayer} you won!`);
+            countScoreWinner();
             restartGame();
             return 1;
         }
@@ -134,6 +135,7 @@ function checkIfDraw() {
 
     if (countClickedButtons === 9) {
         alert('Draw!');
+        countScoreDraw(); 
         restartGame();
     }
 }
@@ -145,4 +147,22 @@ function writeOutPlayer() {
     } else {
         nextPlayer.innerHTML = 'X';
     }
+}
+
+// Add one point to the winning player.
+function setScoreCountWinner() {
+    let scorePlayerX = document.getElementById('scoresPlayerX').innerHTML;
+    let scorePlayerO = document.getElementById('scoresPlayerO').innerHTML;
+
+    if (currentPlayer === 'X') {
+        document.getElementById('scoresPlayerX').innerHTML = ++scorePlayerX;
+    } if (currentPlayer === 'O') {
+        document.getElementById('scoresPlayerO').innerHTML = ++scorePlayerO;
+    }
+}
+
+// Add one point to draw.
+function setScoreCountDraw() {
+    let scoreDraw = document.getElementById('scoresDraw').innerHTML;
+    document.getElementById('scoresDraw').innerHTML = ++scoreDraw;
 }

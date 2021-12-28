@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Eventlisteners click for game board buttons
     let buttons = document.getElementsByClassName('tile-btn');
 
-    for (button of buttons) {
+    for (let button of buttons) {
         button.addEventListener('click', gameBoardBtnClick);
         button.disabled = true; //To make the buttons unclickable before game is started. 
     }
 
-    // Initialize current player.
+    // Initialize currentPlayer.
     getRandomPlayer();
 
 });
@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
  * Main function is called every time a button on game board is clicked. */
 function gameBoardBtnClick() {
     let button = this;
-    button.disabled = true;
-    setPlayerOnBtn(button)
-    checkIfWin();
-    changePlayer();
+    button.disabled = true; 
+    setPlayerOnBtn(button) // Set player X/O on the button
+    checkIfWin(); // Checks if someone has won or if the game is draw
+    changePlayer(); // Change player
 }
 
 // Randomize which player is first out to play X or O. 
@@ -52,7 +52,6 @@ function changePlayer() {
     } else {
         currentPlayer = 'X';
     }
-
 }
 
 // Checks all the differents ways the player can win to se if someone has won.
@@ -74,7 +73,6 @@ function checkIfWin() {
             return 1;  
         } 
         return 0;
-
     }
 
     let winCount = 0;
@@ -93,28 +91,26 @@ function checkIfWin() {
     if (winCount === 0) {
         checkIfDraw();
     }
-
 }
+
 //Hides the start button and make the buttons clickable.
 function startGame() {
-
     document.getElementById('start-btn').style.display = "none";
     let buttons = document.getElementsByClassName('tile-btn');
 
-    for (button of buttons) {
+    for (let button of buttons) {
         button.disabled = false;
     }
 }
 
 // Prepare the game for restart by changing name on and reseting buttons. 
 function restartGame() {
-
     let restartButton = document.getElementById('start-btn');
     restartButton.innerHTML = "RESTART";
     restartButton.style.display = "block";
     let buttons = document.getElementsByClassName('tile-btn');
 
-    for (button of buttons) {
+    for (let button of buttons) {
         button.disabled = true;
         button.innerHTML = "";
     }
@@ -126,7 +122,7 @@ function checkIfDraw() {
     let buttons = document.getElementsByClassName('tile-btn');
     let countClickedButtons = 0;
 
-    for (button of buttons) {
+    for (let button of buttons) {
         
         if (button.disabled === true) {
             countClickedButtons++;
@@ -135,6 +131,7 @@ function checkIfDraw() {
 
     if (countClickedButtons === 9) {
         alert('Draw!');
+        restartGame();
     }
 
 }

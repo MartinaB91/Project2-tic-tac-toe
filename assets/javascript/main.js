@@ -71,21 +71,30 @@ function checkIfWin() {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
             alert(`Congratulations player ${currentPlayer} you won!`);
             restartGame();
-        }
+            return 1;  
+        } 
+        return 0;
 
     }
 
-    winScenarios(btn1, btn2, btn3); // First row horizontal
-    winScenarios(btn4, btn5, btn6); // Second row horizontal
-    winScenarios(btn7, btn8, btn9); // Third row horizontal
-    winScenarios(btn1, btn4, btn7); // First row vertical 
-    winScenarios(btn2, btn5, btn8); // Second row vertical
-    winScenarios(btn3, btn6, btn9); // Second row vertical
-    winScenarios(btn3, btn5, btn7); // Diagonally right to bottom
-    winScenarios(btn1, btn5, btn9); // Diagonally left to bottom
+    let winCount = 0;
+
+   winCount += winScenarios(btn1, btn2, btn3); // First row horizontal
+   winCount += winScenarios(btn4, btn5, btn6); // Second row horizontal
+   winCount += winScenarios(btn7, btn8, btn9); // Third row horizontal
+   winCount += winScenarios(btn1, btn4, btn7); // First row vertical 
+   winCount += winScenarios(btn2, btn5, btn8); // Second row vertical
+   winCount += winScenarios(btn3, btn6, btn9); // Second row vertical
+   winCount += winScenarios(btn3, btn5, btn7); // Diagonally right to bottom
+   winCount += winScenarios(btn1, btn5, btn9); // Diagonally left to bottom
+
+   /**To prevent draw happening if someone wins at the last turn.
+    * The checkIfDraw function is only called when someone hasen't won  */
+    if (winCount === 0) {
+        checkIfDraw();
+    }
 
 }
-
 //Hides the start button and make the buttons clickable.
 function startGame() {
 
@@ -97,7 +106,7 @@ function startGame() {
     }
 }
 
-// Prepare the game for restart by reseting buttons. 
+// Prepare the game for restart by changing name on and reseting buttons. 
 function restartGame() {
 
     let restartButton = document.getElementById('start-btn');
@@ -108,6 +117,24 @@ function restartGame() {
     for (button of buttons) {
         button.disabled = true;
         button.innerHTML = "";
+    }
+
+}
+// Checks if every button is claimed. If they are the result is draw. 
+function checkIfDraw() {
+
+    let buttons = document.getElementsByClassName('tile-btn');
+    let countClickedButtons = 0;
+
+    for (button of buttons) {
+        
+        if (button.disabled === true) {
+            countClickedButtons++;
+        }
+    }
+
+    if (countClickedButtons === 9) {
+        alert('Draw!');
     }
 
 }

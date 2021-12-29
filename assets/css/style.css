@@ -1,11 +1,23 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: #C2C5AA;
+    background-image: url('../images/pexels-rudolf-jakkel-418831.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
     font-family: 'Shadows Into Light', cursive;
 }
+
 h1 {
     text-align: center;
     margin: 2%;
-    
+}
+
+button {
+    font-family : inherit;
 }
 
 /* styling div info */
@@ -13,11 +25,29 @@ h1 {
     margin-left: 3%;
 }
 
+/* Styling div game board */
 #game {
-    margin: auto;
-    width: 30%;
+    height: auto;
+    width: 38rem;
     background-color: #C2C5AA;
     position: relative;
+    margin: auto;
+}
+
+#board {
+    width: 28rem;
+    height: 28rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto;
+}
+
+.tile-btn {
+    width: 9rem;
+    height: 9rem;
+    border: none;
+    background-color: #FFE8D6;
 }
 
 /* Styling start button */
@@ -32,17 +62,6 @@ h1 {
     right: 28%;
 }
 
-.tile-btn {
-    width: 9rem;
-    height: 9rem;
-    border: none;
-    background-color: #FFE8D6;
-} 
-/* Setting space between buttons */
-.row {
-    --bs-gutter-x: 10px;
-} 
-
 /* styling div score */
 .scores {
     display: inline-block;
@@ -53,4 +72,3 @@ h1 {
 #scoreTextPlayerX {
     margin-left: 12%;
 }
-

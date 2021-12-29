@@ -45,9 +45,11 @@ function setPlayerOnBtn(button) {
     if (currentPlayer === 'X') {
         button.innerHTML = 'X';
         button.style.fontSize = '500%';
+        button.style.color = '#7F4F24';
     } else {
         button.innerHTML = 'O';
         button.style.fontSize = '500%';
+        button.style.color = '#656D4A';
     }
 }
 

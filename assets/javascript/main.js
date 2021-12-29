@@ -44,8 +44,10 @@ function getRandomPlayer() {
 function setPlayerOnBtn(button) {
     if (currentPlayer === 'X') {
         button.innerHTML = 'X';
+        button.style.fontSize = '500%';
     } else {
         button.innerHTML = 'O';
+        button.style.fontSize = '500%';
     }
 }
 
@@ -142,6 +144,7 @@ function checkIfDraw() {
 // Write out whose turn it is. 
 function writeOutPlayer() {
     let nextPlayer = document.getElementById('player');
+    
     if (currentPlayer === 'X') {
         nextPlayer.innerHTML = 'O';
     } else {

@@ -29,20 +29,14 @@ h1 {
 }
 
 .tile-btn {
-    width: 100%;
-    height: 100%;
+    width: 9rem;
+    height: 9rem;
+    border: none;
 } 
-/* Removing space between buttons */
+/* Setting space between buttons */
 .row {
-    --bs-gutter-x: 0;
+    --bs-gutter-x: 10px;
 } 
-
-/* Set the height = width to make a square */
-.tile-btn:before {
-    content:"";
-    display: block;
-    padding-top: 100%;
-}
 
 /* styling div score */
 .scores {

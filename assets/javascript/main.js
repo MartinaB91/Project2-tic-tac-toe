@@ -73,7 +73,7 @@ function checkIfWin() {
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
             alert(`Congratulations player ${currentPlayer} you won!`);
-            countScoreWinner();
+            setScoreCountWinner();
             restartGame();
             return 1;
         }
@@ -135,7 +135,7 @@ function checkIfDraw() {
 
     if (countClickedButtons === 9) {
         alert('Draw!');
-        countScoreDraw(); 
+        setScoreCountDraw(); 
         restartGame();
     }
 }

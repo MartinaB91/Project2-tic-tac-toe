@@ -1,5 +1,12 @@
 h1 {
     text-align: center;
+    margin: 2%;
+    
+}
+
+/* styling div info */
+#info {
+    margin-left: 3%;
 }
 
 #game {
@@ -35,15 +42,15 @@ h1 {
     content:"";
     display: block;
     padding-top: 100%;
- 
 }
 
-/* styling scores */
+/* styling div score */
 .scores {
     display: inline-block;
     margin-right: 12%;
     margin-top: 4%;
 }
+
 #scoreTextPlayerX {
     margin-left: 12%;
 }

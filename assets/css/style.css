@@ -38,3 +38,13 @@ h1 {
  
 }
 
+/* styling scores */
+.scores {
+    display: inline-block;
+    margin-right: 12%;
+    margin-top: 4%;
+}
+#scoreTextPlayerX {
+    margin-left: 12%;
+}
+

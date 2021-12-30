@@ -1,4 +1,5 @@
 let currentPlayer = "not assigned";
+let winnerIntervalId; 
 
 // Add eventlistener first when DOM is finish loading. 
 document.addEventListener("DOMContentLoaded", function () {
@@ -80,6 +81,7 @@ function checkIfWin() {
             btnA.style.backgroundColor = 'green'; // Shows the winning scenario by giving it a color. 
             btnB.style.backgroundColor = 'green';
             btnC.style.backgroundColor = 'green';
+            winBtnAnimation(btnA,btnB,btnC);
             setScoreCountWinner();
             restartGame();
             return 1;
@@ -115,6 +117,8 @@ function startGame() {
         button.innerHTML = "";
         button.style.boxShadow = 'none';
         button.style.backgroundColor = '#FFE8D6';
+        clearInterval(winnerIntervalId); // Clear interval in winBtnAnimation function
+       
     }
 
     for (let button of buttons) {
@@ -190,4 +194,18 @@ function setScoreCountWinner() {
 function setScoreCountDraw() {
     let scoreDraw = document.getElementById('scoresDraw').innerHTML;
     document.getElementById('scoresDraw').innerHTML = ++scoreDraw;
+}
+
+/**
+ * Making buttons blink when someone wins.
+ * Inspiration from: https://www.py4u.net/discuss/301230
+ *  */ 
+function winBtnAnimation(btnA,btnB,btnC) {
+        winnerIntervalId = setInterval(function() {
+        btnA.style.backgroundColor = (btnA.style.backgroundColor == 'green' ? '#FFE8D6' : 'green');
+        btnB.style.backgroundColor = (btnB.style.backgroundColor == 'green' ? '#FFE8D6' : 'green');
+        btnC.style.backgroundColor = (btnC.style.backgroundColor == 'green' ? '#FFE8D6' : 'green');
+        
+    }, 800); 
+
 }

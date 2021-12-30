@@ -77,7 +77,7 @@ function checkIfWin() {
 
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
-            btnA.style.backgroundColor = 'green';
+            btnA.style.backgroundColor = 'green'; // Shows the winning scenario by giving it a color. 
             btnB.style.backgroundColor = 'green';
             btnC.style.backgroundColor = 'green';
             setScoreCountWinner();
@@ -105,7 +105,7 @@ function checkIfWin() {
     }
 }
 
-// Hides the start button and make the buttons clickable.
+// Hides the start button, reset the buttons and make the buttons clickable. 
 function startGame() {
     document.getElementById('start-btn').style.display = "none";
     let buttons = document.getElementsByClassName('tile-btn');
@@ -114,6 +114,7 @@ function startGame() {
         button.disabled = true;
         button.innerHTML = "";
         button.style.boxShadow = 'none';
+        button.style.backgroundColor = '#FFE8D6';
     }
 
     for (let button of buttons) {
@@ -121,7 +122,7 @@ function startGame() {
     }
 }
 
-// Prepare the game for restart by changing name on and reseting buttons. 
+// Prepare the game for restart by changing name on button. 
 function restartGame() {
     let restartButton = document.getElementById('start-btn');
     restartButton.innerHTML = "RESTART";
@@ -142,7 +143,7 @@ function checkIfDraw() {
 
     if (countClickedButtons === 9) {
         for (let button of buttons) {
-            button.style.backgroundColor = 'red';
+            button.style.backgroundColor = 'red'; // Shows the user the game is draw by giving all buttons a color. 
         }
         setScoreCountDraw(); 
         restartGame();

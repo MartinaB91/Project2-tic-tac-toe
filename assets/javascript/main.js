@@ -109,6 +109,12 @@ function startGame() {
     let buttons = document.getElementsByClassName('tile-btn');
 
     for (let button of buttons) {
+        button.disabled = true;
+        button.innerHTML = "";
+        button.style.boxShadow = 'none';
+    }
+
+    for (let button of buttons) {
         button.disabled = false;
     }
 }
@@ -118,13 +124,6 @@ function restartGame() {
     let restartButton = document.getElementById('start-btn');
     restartButton.innerHTML = "RESTART";
     restartButton.style.display = "block";
-    let buttons = document.getElementsByClassName('tile-btn');
-
-    for (let button of buttons) {
-        button.disabled = true;
-        button.innerHTML = "";
-        button.style.boxShadow = 'none';
-    }
 }
 
 // Checks if every button is claimed. If they are the result is draw. 

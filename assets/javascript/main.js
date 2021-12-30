@@ -45,10 +45,12 @@ function setPlayerOnBtn(button) {
         button.innerHTML = 'X';
         button.style.fontSize = '500%';
         button.style.color = '#7F4F24';
+        button.style.boxShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
     } else {
         button.innerHTML = 'O';
         button.style.fontSize = '500%';
         button.style.color = '#6B705C';
+        button.style.boxShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
     }
 }
 
@@ -121,6 +123,7 @@ function restartGame() {
     for (let button of buttons) {
         button.disabled = true;
         button.innerHTML = "";
+        button.style.boxShadow = 'none';
     }
 }
 

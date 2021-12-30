@@ -41,7 +41,7 @@ function getRandomPlayer() {
 }
 
 // Using the global variable currentPlayer to set the player on the button. 
-function setPlayerOnBtn(button) {
+function setPlayerOnBtn(button) {    
     if (currentPlayer === 'X') {
         button.innerHTML = 'X';
         button.style.fontSize = '500%';

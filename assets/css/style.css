@@ -4,16 +4,22 @@ body {
 }
 
 body {
-    background-color: #C2C5AA;
+    background-color: #A5A58D;
     background-image: url('../images/pexels-rudolf-jakkel-418831.jpg');
-    background-size: 100%;
     background-repeat: no-repeat;
     font-family: 'Shadows Into Light', cursive;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+/* TODO: See if object-fit: cover is needed */
+    
 }
 
 h1 {
+    font-size: 500%;
+    font-weight: bolder;
     text-align: center;
-    margin: 2%;
+    margin: 2% 0 0;
 }
 
 button {
@@ -28,10 +34,12 @@ button {
 /* Styling div game board */
 #game {
     height: auto;
-    width: 38rem;
-    background-color: #C2C5AA;
+    width: 32rem;
+    background-color: #A5A58D;
     position: relative;
     margin: auto;
+    box-shadow: 0 10px 60px 0 rgba(0,0,0, .25);
+ 
 }
 
 #board {
@@ -54,7 +62,7 @@ button {
 #start-btn {
     border: none;
     background: none;
-    color: #414833;
+    color: black;
     font-size: 400%;
     font-weight: bold;
     position: absolute;

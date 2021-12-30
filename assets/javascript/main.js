@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     getRandomPlayer();
 
     // Shows witch player starts playing. 
-    let nextPlayer = document.getElementById('player');
-    nextPlayer.innerHTML = currentPlayer;
-    
+    writeOutPlayer(true);
+  
 });
 
 /**Main function that calls other functions and desides the order they are executed in. 
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function gameBoardBtnClick() {
     let button = this;
     button.disabled = true;
-    writeOutPlayer(); // Writes out who is next in line
+    writeOutPlayer(false); // Writes out who is next in line
     setPlayerOnBtn(button) // Set player X/O on the button
     checkIfWin(); // Checks if someone has won or if the game is draw
     changePlayer(); // Change player
@@ -49,7 +48,7 @@ function setPlayerOnBtn(button) {
     } else {
         button.innerHTML = 'O';
         button.style.fontSize = '500%';
-        button.style.color = '#656D4A';
+        button.style.color = '#6B705C';
     }
 }
 
@@ -143,14 +142,28 @@ function checkIfDraw() {
         restartGame();
     }
 }
-// Write out whose turn it is. 
-function writeOutPlayer() {
+/** Write out whose turn it is. The first time we want to write out
+ *  the current player that is loaded with the DOM so the user can se which player starts playing.
+ *  After that we want to write out the next player that is going to play. */ 
+function writeOutPlayer(firstTurn) {
     let nextPlayer = document.getElementById('player');
-    
-    if (currentPlayer === 'X') {
-        nextPlayer.innerHTML = 'O';
+
+    if (firstTurn) {
+        if (currentPlayer === 'O') {
+            nextPlayer.innerHTML = 'O';
+            nextPlayer.style.color = '#6B705C';
+        } else {
+            nextPlayer.innerHTML = 'X';
+            nextPlayer.style.color = '#7F4F24';
+        }
     } else {
-        nextPlayer.innerHTML = 'X';
+        if (currentPlayer === 'X') {
+            nextPlayer.innerHTML = 'O';
+            nextPlayer.style.color = '#6B705C';
+        } else {
+            nextPlayer.innerHTML = 'X';
+            nextPlayer.style.color = '#7F4F24';
+        }
     }
 }
 

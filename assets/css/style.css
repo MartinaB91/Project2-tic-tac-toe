@@ -26,6 +26,14 @@ button {
     font-family : inherit;
 }
 
+p {
+    font-weight: bold;
+}
+
+/* span {
+    font-weight: 900;
+} */
+
 /* styling div info */
 #info {
     margin-left: 3%;
@@ -77,6 +85,14 @@ button {
     margin-top: 4%;
 }
 
-#scoreTextPlayerX {
+#scoreTextPlayer {
     margin-left: 12%;
+}
+
+#scoreTextX {
+    color: #7F4F24;
+}
+
+#scoreTextO {
+    color: #6B705C;
 }

@@ -77,7 +77,9 @@ function checkIfWin() {
 
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
-            alert(`Congratulations player ${currentPlayer} you won!`);
+            btnA.style.backgroundColor = 'green';
+            btnB.style.backgroundColor = 'green';
+            btnC.style.backgroundColor = 'green';
             setScoreCountWinner();
             restartGame();
             return 1;
@@ -139,7 +141,9 @@ function checkIfDraw() {
     }
 
     if (countClickedButtons === 9) {
-        alert('Draw!');
+        for (let button of buttons) {
+            button.style.backgroundColor = 'red';
+        }
         setScoreCountDraw(); 
         restartGame();
     }

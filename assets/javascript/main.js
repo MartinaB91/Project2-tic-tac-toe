@@ -117,8 +117,9 @@ function startGame() {
         button.innerHTML = "";
         button.style.boxShadow = 'none';
         button.style.backgroundColor = '#FFE8D6';
-        clearInterval(winnerIntervalId); // Clear interval in winBtnAnimation function
-       
+         // Clear interval in winBtnAnimation function. 
+         // Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp
+        clearInterval(winnerIntervalId); 
     }
 
     for (let button of buttons) {
@@ -131,6 +132,7 @@ function restartGame() {
     let restartButton = document.getElementById('start-btn');
     restartButton.innerHTML = "RESTART";
     restartButton.style.display = "block";
+    restartButton.style.right = '28%';
 }
 
 // Checks if every button is claimed. If they are the result is draw. 

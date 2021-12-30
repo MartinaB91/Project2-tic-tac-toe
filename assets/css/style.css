@@ -28,11 +28,16 @@ button {
 
 p {
     font-weight: bold;
+    font-size: 110%;
+}
+
+span {
+    font-size: 200%;
 }
 
 /* styling div info */
 #info {
-    margin-left: 3%;
+    margin-left: 6%;
 }
 
 /* Styling div game board */
@@ -44,7 +49,6 @@ p {
     margin: auto;
     box-shadow: 0 10px 60px 0 rgba(0,0,0, .25);
     border-radius: 0.5rem;
- 
 }
 
 #board {
@@ -71,15 +75,15 @@ p {
     font-size: 400%;
     font-weight: bold;
     position: absolute;
-    top: 35%;
-    right: 28%;
+    top: 39%;
+    right: 33%;
 }
 
 /* styling div score */
 .scores {
     display: inline-block;
     margin-right: 12%;
-    margin-top: 4%;
+    margin-top: 1%;
 }
 
 #scoreTextPlayer {

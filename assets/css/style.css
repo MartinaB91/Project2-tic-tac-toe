@@ -20,6 +20,7 @@ h1 {
     font-weight: bolder;
     text-align: center;
     margin: 2% 0 0;
+    text-transform: uppercase;
 }
 
 button {
@@ -44,7 +45,7 @@ span {
 #game {
     height: auto;
     width: 32rem;
-    background-color: #A5A58D;
+    background-color: rgba(165, 165, 141, 0.8);
     position: relative;
     margin: auto;
     box-shadow: 0 10px 60px 0 rgba(0,0,0, .25);
@@ -91,9 +92,9 @@ span {
 }
 
 #scoreTextX {
-    color: #7F4F24;
+    color: #60463B;
 }
 
 #scoreTextO {
-    color: #6B705C;
+    color: #3C4030;
 }

@@ -45,7 +45,7 @@ function setPlayerOnBtn(button) {
     if (currentPlayer === 'X') {
         button.innerHTML = 'X';
         button.style.fontSize = '500%';
-        button.style.color = '#7F4F24';
+        button.style.color = '#60463B';
         button.style.boxShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
     } else {
         button.innerHTML = 'O';
@@ -78,9 +78,9 @@ function checkIfWin() {
 
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
-            btnA.style.backgroundColor = 'green'; // Shows the winning scenario by giving it a color. 
-            btnB.style.backgroundColor = 'green';
-            btnC.style.backgroundColor = 'green';
+            btnA.style.backgroundColor = '#DDBEA9'; // Shows the winning scenario by giving it a color. 
+            btnB.style.backgroundColor = '#DDBEA9';
+            btnC.style.backgroundColor = '#DDBEA9';
             winBtnAnimation(btnA,btnB,btnC);
             setScoreCountWinner();
             restartGame();
@@ -149,7 +149,7 @@ function checkIfDraw() {
 
     if (countClickedButtons === 9) {
         for (let button of buttons) {
-            button.style.backgroundColor = 'red'; // Shows the user the game is draw by giving all buttons a color. 
+            button.style.backgroundColor = 'rgb(221, 190, 169)'; // Shows the user the game is draw by giving all buttons a color. 
         }
         setScoreCountDraw(); 
         restartGame();
@@ -164,18 +164,18 @@ function writeOutPlayer(firstTurn) {
     if (firstTurn) {
         if (currentPlayer === 'O') {
             nextPlayer.innerHTML = 'O';
-            nextPlayer.style.color = '#6B705C';
+            nextPlayer.style.color = '#3C4030';
         } else {
             nextPlayer.innerHTML = 'X';
-            nextPlayer.style.color = '#7F4F24';
+            nextPlayer.style.color = '#60463B';
         }
     } else {
         if (currentPlayer === 'X') {
             nextPlayer.innerHTML = 'O';
-            nextPlayer.style.color = '#6B705C';
+            nextPlayer.style.color = '#3C4030';
         } else {
             nextPlayer.innerHTML = 'X';
-            nextPlayer.style.color = '#7F4F24';
+            nextPlayer.style.color = '#60463B';
         }
     }
 }
@@ -204,9 +204,9 @@ function setScoreCountDraw() {
  *  */ 
 function winBtnAnimation(btnA,btnB,btnC) {
         winnerIntervalId = setInterval(function() {
-        btnA.style.backgroundColor = (btnA.style.backgroundColor == 'green' ? '#FFE8D6' : 'green');
-        btnB.style.backgroundColor = (btnB.style.backgroundColor == 'green' ? '#FFE8D6' : 'green');
-        btnC.style.backgroundColor = (btnC.style.backgroundColor == 'green' ? '#FFE8D6' : 'green');
+        btnA.style.backgroundColor = (btnA.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btnB.style.backgroundColor = (btnB.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btnC.style.backgroundColor = (btnC.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
         
     }, 800); 
 

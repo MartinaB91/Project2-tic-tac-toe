@@ -132,7 +132,7 @@ function restartGame() {
     let restartButton = document.getElementById('start-btn');
     restartButton.innerHTML = "RESTART";
     restartButton.style.display = "block";
-    restartButton.style.right = '28%';
+    restartButton.style.right = '23%';
 }
 
 // Checks if every button is claimed. If they are the result is draw. 

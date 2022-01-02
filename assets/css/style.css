@@ -21,6 +21,7 @@ h1 {
     text-align: center;
     margin: 2% 0 0;
     text-transform: uppercase;
+    color: #FFE8D6;
 }
 
 button {
@@ -65,17 +66,22 @@ span {
     width: 9rem;
     height: 9rem;
     border: none;
-    background-color: #FFE8D6;
+    background-color: 'rgb(221, 190, 169)';
 }
 
 /* Styling start button */
 #start-btn {
+    border: 3px solid black;
+    border-radius: 0.5rem;
+    /* background-color: rgba(165, 165, 141, 0.9);
+    box-shadow: 0 10px 25px 0 rgba(0,0,0, .25); */
     border: none;
     background: none;
     color: black;
     font-size: 400%;
     font-weight: bold;
     position: absolute;
+    padding: 2%;
     top: 39%;
     right: 33%;
 }

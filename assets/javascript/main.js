@@ -78,9 +78,9 @@ function checkIfWin() {
 
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
-            btnA.style.backgroundColor = '#DDBEA9'; // Shows the winning scenario by giving it a color. 
-            btnB.style.backgroundColor = '#DDBEA9';
-            btnC.style.backgroundColor = '#DDBEA9';
+            btnA.style.backgroundColor = 'rgb(221, 190, 169)'; // Shows the winning scenario by giving it a color. 
+            btnB.style.backgroundColor = 'rgb(221, 190, 169)';
+            btnC.style.backgroundColor = 'rgb(221, 190, 169)';
             winBtnAnimation(btnA,btnB,btnC);
             setScoreCountWinner();
             restartGame();
@@ -148,11 +148,9 @@ function checkIfDraw() {
     }
 
     if (countClickedButtons === 9) {
-        for (let button of buttons) {
-            button.style.backgroundColor = 'rgb(221, 190, 169)'; // Shows the user the game is draw by giving all buttons a color. 
-        }
-        setScoreCountDraw(); 
-        restartGame();
+    drawBtnAnimation()
+    setScoreCountDraw(); 
+    restartGame();
     }
 }
 /** Write out whose turn it is. The first time we want to write out
@@ -210,4 +208,28 @@ function winBtnAnimation(btnA,btnB,btnC) {
         
     }, 800); 
 
+}
+
+// Making button blink if game is draw.
+function drawBtnAnimation() {
+
+    let btn1 = document.getElementById('btn-tile-1');
+    btn1.style.backgroundColor = 'rgb(221, 190, 169)';
+    let btn3 = document.getElementById('btn-tile-3');
+    btn3.style.backgroundColor = 'rgb(221, 190, 169)';
+    let btn5 = document.getElementById('btn-tile-5');
+    btn5.style.backgroundColor = 'rgb(221, 190, 169)';
+    let btn7 = document.getElementById('btn-tile-7');
+    btn7.style.backgroundColor = 'rgb(221, 190, 169)';
+    let btn9 = document.getElementById('btn-tile-9');
+    btn9.style.backgroundColor = 'rgb(221, 190, 169)';
+   
+    winnerIntervalId = setInterval(function() {
+        btn1.style.backgroundColor = (btn1.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btn3.style.backgroundColor = (btn3.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btn5.style.backgroundColor = (btn5.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btn7.style.backgroundColor = (btn7.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btn9.style.backgroundColor = (btn9.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+
+    }, 800);
 }

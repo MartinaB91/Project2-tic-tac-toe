@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: Read more about viewport and see why this seems needed. -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- https://stackoverflow.com/questions/15365750/viewport-tag-not-working-on-chrome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
     <meta name="keywords" content="Game, Tic tac toe">
     <meta name="description" content="Play the classic game Tic Tac Toe with a friend.">
 
@@ -37,14 +41,14 @@
         </div>
         <div id="score">
             <p class="scores" id="scoreTextPlayer">Player <span id="scoreTextX">X: </span><span id="scoresPlayerX">0</span></p>
-            <p class="scores">Draw: <span id="scoresDraw">0</span></p>
+            <p class="scores">Draw <span id="scoresDraw">0</span></p>
             <p class="scores">Player <span id='scoreTextO'>O: </span><span id="scoresPlayerO">0</span></p>
         </div>
     </section>
    
     <!-- Javascript -->
     <script src="assets/javascript/main.js"></script>
-    <script src="assets/javascript/utils.js"></script>
+    <!-- <script src="assets/javascript/utils.js"></script> -->
 
 </body>
 

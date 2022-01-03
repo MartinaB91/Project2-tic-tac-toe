@@ -44,14 +44,10 @@ function getRandomPlayer() {
 function setPlayerOnBtn(button) {    
     if (currentPlayer === 'X') {
         button.innerHTML = 'X';
-        button.style.fontSize = '500%';
-        button.style.color = '#60463B';
-        button.style.boxShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
+        button.classList.add('xBtn'); // Add a class to pressed button. Class used to style button in css. 
     } else {
         button.innerHTML = 'O';
-        button.style.fontSize = '500%';
-        button.style.color = '#6B705C';
-        button.style.boxShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
+        button.classList.add('oBtn'); // Add a class to pressed button. Class used to style button in css. 
     }
 }
 
@@ -120,6 +116,8 @@ function startGame() {
          // Clear interval in winBtnAnimation function. 
          // Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp
         clearInterval(winnerIntervalId); 
+        button.classList.remove('xBtn', 'oBtn'); //Removes classes xBtn and oBtn added in function setPlayerOnBtn. 
+        // Found solution : https://developer.mozilla.org/en-US/docs/Web/API/Element/classList. 
     }
 
     for (let button of buttons) {
@@ -233,3 +231,4 @@ function drawBtnAnimation() {
 
     }, 800);
 }
+

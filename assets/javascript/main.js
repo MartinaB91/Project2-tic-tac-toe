@@ -44,9 +44,11 @@ function setPlayerOnBtn(button) {
     if (currentPlayer === 'X') {
         button.innerHTML = 'X';
         button.classList.add('xBtn'); // Add a class to pressed button. Class used to style button in css. 
+        button.style.boxShadow ='inset 0 5px 15px 0 rgba(0,0,0, .15)';
     } else {
         button.innerHTML = 'O';
-        button.classList.add('oBtn'); // Add a class to pressed button. Class used to style button in css. 
+        button.classList.add('oBtn'); // Add a class to pressed button. Class used to style button in css.
+        button.style.boxShadow ='inset 0 5px 15px 0 rgba(0,0,0, .15)'; 
     }
 }
 

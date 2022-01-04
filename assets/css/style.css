@@ -119,13 +119,11 @@ span {
 .xBtn {
     font-size: 500%;
     color: #60463B;
-    box-shadow: inset 0 5px 15px 0 rgba(0,0,0, .15);
 }
 
 .oBtn {
     font-size: 500%;
     color: #6B705C;
-    box-shadow: inset 0 5px 15px 0 rgba(0,0,0, .15);
 }
 
 /* Media queries */

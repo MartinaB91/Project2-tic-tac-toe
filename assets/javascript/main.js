@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Eventlistener click for start button
     document.getElementById('start-btn').addEventListener('click', startGame);
 
-
-
     // Eventlisteners click for game board buttons
     let buttons = document.getElementsByClassName('tile-btn');
 
@@ -236,7 +234,6 @@ function winBtnAnimation(btnA,btnB,btnC) {
 
 // Making button blink if game is draw.
 function drawBtnAnimation() {
-
     let btn1 = document.getElementById('btn-tile-1');
     btn1.style.backgroundColor = 'rgb(221, 190, 169)';
     let btn3 = document.getElementById('btn-tile-3');

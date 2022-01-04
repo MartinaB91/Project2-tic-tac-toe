@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Eventlistener click for start button
     document.getElementById('start-btn').addEventListener('click', startGame);
 
+
+
     // Eventlisteners click for game board buttons
     let buttons = document.getElementsByClassName('tile-btn');
 
@@ -103,9 +105,21 @@ function checkIfWin() {
     }
 }
 
-// Hides the start button, reset the buttons and make the buttons clickable. 
+// Hides the start/restart button, reset the buttons and make the buttons clickable. 
 function startGame() {
-    document.getElementById('start-btn').style.display = "none";
+    let startButton = document.getElementById('start-btn');
+
+    /** Removes the start button if it exists, if the start buttons is null 
+     * (doesent't exist) remove the restart button. 
+     * https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null*/
+    if (startButton !== null) { 
+        startButton.style.display = 'none';
+    } 
+    if(startButton == null) { 
+        let restartButton = document.getElementById('restart-btn');
+        restartButton.style.display = 'none';
+    }
+    
     let buttons = document.getElementsByClassName('tile-btn');
 
     for (let button of buttons) {
@@ -115,8 +129,8 @@ function startGame() {
         button.style.backgroundColor = '#FFE8D6';
          // Clear interval in winBtnAnimation function. 
          // Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp
-        clearInterval(winnerIntervalId); 
-        button.classList.remove('xBtn', 'oBtn'); //Removes classes xBtn and oBtn added in function setPlayerOnBtn. 
+        clearInterval(winnerIntervalId); // Removes blinking effects.
+        button.classList.remove('xBtn', 'oBtn'); // Removes classes xBtn and oBtn added in function setPlayerOnBtn. 
         // Found solution : https://developer.mozilla.org/en-US/docs/Web/API/Element/classList. 
     }
 
@@ -127,12 +141,21 @@ function startGame() {
 
 // Prepare the game for restart by changing name on button. 
 function restartGame() {
-    let restartButton = document.getElementById('start-btn');
-    restartButton.innerHTML = "RESTART";
-    restartButton.style.display = "block";
-    restartButton.style.right = '23%';
+    let startButton = document.getElementById('start-btn');
+    let restartButton = document.getElementById('restart-btn');
+    if (startButton !== null) { 
+        startButton.id = 'restart-btn'; // If start-btn exist rename it to restart-btn.
+        startButton.innerHTML = "RESTART";
+        startButton.style.display = "block";
+        document.getElementById('restart-btn').addEventListener('click', startGame); // Because the button have changed id 
+        //a new event listener that listens for the new id is needed. 
+    } 
+    if (restartButton !== null) {
+        restartButton.style.display = "block";
+    }
+    // restartButton.style.right = '23%';
 }
-
+  
 // Checks if every button is claimed. If they are the result is draw. 
 function checkIfDraw() {
     let buttons = document.getElementsByClassName('tile-btn');

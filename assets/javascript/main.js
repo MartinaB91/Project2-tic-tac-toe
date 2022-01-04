@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Shows witch player starts playing. 
     writeOutPlayer(true);
-  
 });
 
 /**Main function that calls other functions and desides the order they are executed in. 
@@ -147,8 +146,9 @@ function restartGame() {
         startButton.id = 'restart-btn'; // If start-btn exist rename it to restart-btn.
         startButton.innerHTML = "RESTART";
         startButton.style.display = "block";
-        document.getElementById('restart-btn').addEventListener('click', startGame); // Because the button have changed id 
+        // Because the button have changed id 
         //a new event listener that listens for the new id is needed. 
+        document.getElementById('restart-btn').addEventListener('click', startGame); 
     } 
     if (restartButton !== null) {
         restartButton.style.display = "block";

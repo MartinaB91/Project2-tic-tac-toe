@@ -83,6 +83,19 @@ span {
     right: 28%;
 }
 
+#restart-btn {
+    background-color: rgb(221, 190, 169, 0.8); 
+    box-shadow: 0 10px 25px 0 rgba(0,0,0, .25);
+    border-radius: 0.5rem;
+    color: black;
+    font-size: 400%;
+    font-weight: bold;
+    position: absolute;
+    padding: 1% 5%;
+    top: 39%;
+    right: 23%;
+}
+
 /* styling div score */
 .scores {
     display: inline-block;

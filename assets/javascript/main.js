@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Main function is called every time a button on game board is clicked. */
 function gameBoardBtnClick() {
     let button = this;
-    button.disabled = true;
+    button.disabled = true; // For making button once clicked not clickable. 
     writeOutPlayer(false); // Writes out who is next in line
     setPlayerOnBtn(button) // Set player X/O on the button
     checkIfWin(); // Checks if someone has won or if the game is draw
@@ -153,7 +153,10 @@ function restartGame() {
     if (restartButton !== null) {
         restartButton.style.display = "block";
     }
-    // restartButton.style.right = '23%';
+    let buttons = document.getElementsByClassName('tile-btn'); // For making buttons unclickable when player has won. 
+    for (let button of buttons) {
+        button.disabled = true;
+    }
 }
   
 // Checks if every button is claimed. If they are the result is draw. 

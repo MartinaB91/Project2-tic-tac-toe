@@ -28,10 +28,31 @@ In this section you will find out more about the different features this site co
 ### Future improvements
 ## Deployment
 ## Credits
-## Code
-## Content and media
+### Code
+[Developer drive – Grid system](https://www.developerdrive.com/how-to-create-a-css-grid-step-by-step ): Used for building grid system for game board.
 
-## Tools
+[Codeinwp – Event listener](https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/): Used when adding event listeners for game board buttons.
 
+[Flexible – Disable buttons](https://flexiple.com/disable-button-javascript/): Used on game board to disabled buttons.
+
+[PY4U.NET - Text-flash](https://www.py4u.net/discuss/301230): Used for making game board buttons blink when someone winns or the game is draw. 
+
+[Youtube – Kevin Powell](https://www.youtube.com/watch?v=Yon4l3MUBGY): Used for making box-shadow on gameboard and buttons. 
+
+[Stackoverflow – undefined or null](https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null): Used for if statement checking if start button is null.
+
+[w3school - Clear interval](https://www.w3schools.com/jsref/met_win_clearinterval.asp): Used for remove blinking effects on game board buttons when restarting the game. 
+
+[MDN Web Docs – Element.classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList): Used for remove earlier added classes from X and O buttons before a new round of the game starts. 
+### Content and media
+[Google fonts](https://fonts.google.com/): Used for all text. 
+
+[Pexels](https://www.pexels.com/): The background picture is from Pexels. 
+### Tools
+[Coolors](https://coolors.co/palettes/trending ): Used for finding colors that go well together. 
+
+[HTML color codes](https://www.hexcolortool.com/): Used to make the green used for player O button darker.
+
+[HexToRGB](https://www.hextorgb.co/ ): For convert hex to rgb this converter were used. 
 
 

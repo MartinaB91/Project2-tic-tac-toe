@@ -7,6 +7,7 @@ const playerXText = 'X';
 const restartButtonText = 'RESTART';
 const restartButtonLayout ='block';
 const tileButtonShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
+const colorUnclickedBtns = '#FFE8D6';
 const colorWinningBtns = 'rgb(221, 190, 169)';
 
 /* Add eventlistener first when DOM is finish loading. */ 
@@ -129,7 +130,7 @@ function startGame() {
         button.disabled = true;
         button.innerHTML = "";
         button.style.boxShadow = 'none';
-        button.style.backgroundColor = '#FFE8D6';
+        button.style.backgroundColor = colorUnclickedBtns;
         /** 
          * Clear interval in winBtnAnimation function. Removes blinking effects.
          * Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp  */
@@ -234,9 +235,9 @@ function setScoreCountDraw() {
  *  */ 
 function winBtnAnimation(btnA,btnB,btnC) {
         winnerIntervalId = setInterval(function() {
-        btnA.style.backgroundColor = (btnA.style.backgroundColor == colorWinningBtns ? '#FFE8D6' : colorWinningBtns);
-        btnB.style.backgroundColor = (btnB.style.backgroundColor == colorWinningBtns ? '#FFE8D6' : colorWinningBtns);
-        btnC.style.backgroundColor = (btnC.style.backgroundColor == colorWinningBtns ? '#FFE8D6' : colorWinningBtns);
+        btnA.style.backgroundColor = (btnA.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
+        btnB.style.backgroundColor = (btnB.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
+        btnC.style.backgroundColor = (btnC.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
         
     }, 800); 
 
@@ -245,22 +246,22 @@ function winBtnAnimation(btnA,btnB,btnC) {
 /* Making button blink if game is draw. */
 function drawBtnAnimation() {
     let btn1 = document.getElementById('btn-tile-1');
-    btn1.style.backgroundColor = 'rgb(221, 190, 169)';
+    btn1.style.backgroundColor = colorWinningBtns;
     let btn3 = document.getElementById('btn-tile-3');
-    btn3.style.backgroundColor = 'rgb(221, 190, 169)';
+    btn3.style.backgroundColor = colorWinningBtns;
     let btn5 = document.getElementById('btn-tile-5');
-    btn5.style.backgroundColor = 'rgb(221, 190, 169)';
+    btn5.style.backgroundColor = colorWinningBtns;
     let btn7 = document.getElementById('btn-tile-7');
-    btn7.style.backgroundColor = 'rgb(221, 190, 169)';
+    btn7.style.backgroundColor = colorWinningBtns;
     let btn9 = document.getElementById('btn-tile-9');
-    btn9.style.backgroundColor = 'rgb(221, 190, 169)';
+    btn9.style.backgroundColor = colorWinningBtns;
    
     winnerIntervalId = setInterval(function() {
-        btn1.style.backgroundColor = (btn1.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
-        btn3.style.backgroundColor = (btn3.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
-        btn5.style.backgroundColor = (btn5.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
-        btn7.style.backgroundColor = (btn7.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
-        btn9.style.backgroundColor = (btn9.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btn1.style.backgroundColor = (btn1.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
+        btn3.style.backgroundColor = (btn3.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
+        btn5.style.backgroundColor = (btn5.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
+        btn7.style.backgroundColor = (btn7.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
+        btn9.style.backgroundColor = (btn9.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
 
     }, 800);
 }

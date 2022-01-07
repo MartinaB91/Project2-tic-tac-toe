@@ -48,6 +48,7 @@ span {
 
 #game-info {
     background-color: rgba(165, 165, 141, 0.8);
+    border-radius: 0.5rem;
     position: absolute;
     width: 90%;
     top: 9%;

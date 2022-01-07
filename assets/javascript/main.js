@@ -3,7 +3,10 @@ const playerOColor = '#3C4030';
 const playerXColor = '#60463B';
 const playerOText = 'O';
 const playerXText = 'X';
+const restartButtonText = 'RESTART';
+const restartButtonLayout ='block';
 const tileButtonShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
+const colorWinningBtns = 'rgb(221, 190, 169)';
 let winnerIntervalId; 
 
 /* Add eventlistener first when DOM is finish loading. */ 
@@ -26,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     writeOutPlayer(true);
 });
 
-/**Main function that calls other functions and desides the order they are executed in. 
+/**
+ * Main function that calls other functions and desides the order they are executed in. 
  * Main function is called every time a button on game board is clicked. */
 function gameBoardBtnClick() {
     let button = this;
@@ -72,9 +76,9 @@ function checkIfWin() {
 
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
-            btnA.style.backgroundColor = 'rgb(221, 190, 169)'; /* Shows the winning scenario by giving it a color. */
-            btnB.style.backgroundColor = 'rgb(221, 190, 169)';
-            btnC.style.backgroundColor = 'rgb(221, 190, 169)';
+            btnA.style.backgroundColor = colorWinningBtns; /* Shows the winning scenario by giving it a color. */
+            btnB.style.backgroundColor = colorWinningBtns;
+            btnC.style.backgroundColor = colorWinningBtns;
             winBtnAnimation(btnA,btnB,btnC);
             setScoreCountWinner();
             restartGame();
@@ -93,7 +97,8 @@ function checkIfWin() {
     winCount += winScenarios(btn[2], btn[4], btn[6]); /* Diagonally right to bottom. */
     winCount += winScenarios(btn[0], btn[4], btn[8]); /* Diagonally left to bottom */
 
-    /**To prevent draw happening if someone wins at the last turn.
+    /**
+     * To prevent draw happening if someone wins at the last turn.
      * The checkIfDraw function is only called when someone hasen't won  */
     if (winCount === 0) {
         checkIfDraw();
@@ -104,7 +109,8 @@ function checkIfWin() {
 function startGame() {
     let startButton = document.getElementById('start-btn');
 
-    /** Removes the start button if it exists, if the start buttons is null 
+    /** 
+     * Removes the start button if it exists, if the start buttons is null 
      * (doesent't exist) remove the restart button. 
      * https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null*/
     if (startButton !== null) { 
@@ -122,11 +128,13 @@ function startGame() {
         button.innerHTML = "";
         button.style.boxShadow = 'none';
         button.style.backgroundColor = '#FFE8D6';
-        /** Clear interval in winBtnAnimation function. Removes blinking effects.
+        /** 
+         * Clear interval in winBtnAnimation function. Removes blinking effects.
          * Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp  */
         clearInterval(winnerIntervalId); 
         button.classList.remove('xBtn', 'oBtn'); 
-        /**Removes classes xBtn and oBtn added in function setPlayerOnBtn.
+        /**
+         * Removes classes xBtn and oBtn added in function setPlayerOnBtn.
          * Found solution : https://developer.mozilla.org/en-US/docs/Web/API/Element/classList. 
           */
     }
@@ -142,15 +150,16 @@ function restartGame() {
     let restartButton = document.getElementById('restart-btn');
     if (startButton !== null) { 
         startButton.id = 'restart-btn'; /* If start-btn exist rename it to restart-btn. */
-        startButton.innerHTML = "RESTART";
-        startButton.style.display = "block";
-        /**Because the button have changed id
+        startButton.innerHTML = restartButtonText;
+        startButton.style.display = restartButtonLayout; 
+        /**
+         * Because the button have changed id
          * a new event listener that listens for the new id is needed. 
          */
         document.getElementById('restart-btn').addEventListener('click', startGame); 
     } 
     if (restartButton !== null) {
-        restartButton.style.display = "block";
+        restartButton.style.display = restartButtonLayout;
     }
     let buttons = document.getElementsByClassName('tile-btn'); /* For making buttons unclickable when player has won. */
     for (let button of buttons) {
@@ -160,6 +169,7 @@ function restartGame() {
   
 /* Checks if every button is claimed. If they are the result is draw. */
 function checkIfDraw() {
+    const allClickableTiles = 9; 
     let buttons = document.getElementsByClassName('tile-btn');
     let countClickedButtons = 0;
 
@@ -170,13 +180,14 @@ function checkIfDraw() {
         }
     }
 
-    if (countClickedButtons === 9) {
+    if (countClickedButtons === allClickableTiles) {
     drawBtnAnimation()
     setScoreCountDraw(); 
     restartGame();
     }
 }
-/** Write out whose turn it is. The first time we want to write out
+/** 
+ * Write out whose turn it is. The first time we want to write out
  *  the current player that is loaded with the DOM so the user can se which player starts playing.
  *  After that we want to write out the next player that is going to play. 
  *  Help from mentor with structuring function.*/ 
@@ -221,9 +232,9 @@ function setScoreCountDraw() {
  *  */ 
 function winBtnAnimation(btnA,btnB,btnC) {
         winnerIntervalId = setInterval(function() {
-        btnA.style.backgroundColor = (btnA.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
-        btnB.style.backgroundColor = (btnB.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
-        btnC.style.backgroundColor = (btnC.style.backgroundColor == 'rgb(221, 190, 169)' ? '#FFE8D6' : 'rgb(221, 190, 169)');
+        btnA.style.backgroundColor = (btnA.style.backgroundColor == colorWinningBtns ? '#FFE8D6' : colorWinningBtns);
+        btnB.style.backgroundColor = (btnB.style.backgroundColor == colorWinningBtns ? '#FFE8D6' : colorWinningBtns);
+        btnC.style.backgroundColor = (btnC.style.backgroundColor == colorWinningBtns ? '#FFE8D6' : colorWinningBtns);
         
     }, 800); 
 

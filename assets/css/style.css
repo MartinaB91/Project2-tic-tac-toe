@@ -41,7 +41,7 @@ span {
     margin-left: 6%;
 }
 
-/* Styling div game board */
+/* Styling div game */
 #game {
     height: auto;
     width: 32rem;
@@ -53,6 +53,7 @@ span {
     box-sizing: border-box; 
 }
 
+/* Styling game board */
 #board {
     width: 28rem;
     height: 28rem;
@@ -69,7 +70,7 @@ span {
     background-color: #FFE8D6;
 }
 
-/* Styling start button */
+/* Styling start/restart button */
 #start-btn {
     background-color: rgb(221, 190, 169, 0.8); 
     box-shadow: 0 10px 25px 0 rgba(0,0,0, .25);
@@ -96,6 +97,17 @@ span {
     right: 23%;
 }
 
+/* Styling X and O game board buttons*/
+.xBtn {
+    font-size: 500%;
+    color: #60463B;
+}
+
+.oBtn {
+    font-size: 500%;
+    color: #6B705C;
+}
+
 /* styling div score */
 .scores {
     display: inline-block;
@@ -115,17 +127,6 @@ span {
     color: #3C4030;
 }
 
-/* Styling X and O game board buttons*/
-.xBtn {
-    font-size: 500%;
-    color: #60463B;
-}
-
-.oBtn {
-    font-size: 500%;
-    color: #6B705C;
-}
-
 /* Media queries */
 
 /* Media queries for small devices  */
@@ -135,11 +136,12 @@ span {
         font-size: 300%;
         margin: 3% 0 7% 0;
     }
-
+    /* Styling div game */
     #game {
         width: 100%;
         border-radius: 0;
     }
+    /* Styling div info */
     #info {
         text-align: center;
         margin-left: 0;
@@ -148,12 +150,18 @@ span {
     #players {
         margin: 0;
     }
-
+    /*Styling game board */
     #board {
         width: 17rem;
         height: 17rem;
     }
 
+    .tile-btn {
+        width: 95%;
+        height: 95%;
+    }
+
+    /* Styling start/restart button */ 
     #start-btn {
         top: 38%;
         right: 25%;
@@ -166,11 +174,8 @@ span {
         font-size: 300%;
     }
 
-    .tile-btn {
-        width: 95%;
-        height: 95%;
-    }
-
+   
+    /* Styling X and O game board buttons*/
     .xBtn {
         font-size: 300%;
     }
@@ -179,6 +184,7 @@ span {
         font-size: 300%;
     }
 
+    /* Styling div score */
     .scores {
         display: 0;
        margin: 0 0 0 5%;

@@ -58,10 +58,10 @@ function setPlayerOnBtn(button) {
 
 /* Changes who plays. */
 function changePlayer() {
-    if (currentPlayer === 'X') {
-        currentPlayer = 'O';
+    if (currentPlayer === playerXText) {
+        currentPlayer = playerOText;
     } else {
-        currentPlayer = 'X';
+        currentPlayer = playerXText;
     }
 }
 
@@ -205,15 +205,14 @@ function checkIfDraw() {
     nextPlayer.style.color = nextPlayerColor;
 }
 
-
 /* Add one point to the winning player. */
 function setScoreCountWinner() {
     let scorePlayerX = document.getElementById('scoresPlayerX').innerHTML;
     let scorePlayerO = document.getElementById('scoresPlayerO').innerHTML;
 
-    if (currentPlayer === 'X') {
+    if (currentPlayer === playerXText) {
         document.getElementById('scoresPlayerX').innerHTML = ++scorePlayerX;
-    } if (currentPlayer === 'O') {
+    } if (currentPlayer === playerOText) {
         document.getElementById('scoresPlayerO').innerHTML = ++scorePlayerO;
     }
 }

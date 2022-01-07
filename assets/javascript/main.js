@@ -52,7 +52,7 @@ function setPlayerOnBtn(button) {
     }
 }
 
-// Changes who plays
+// Changes who plays.
 function changePlayer() {
     if (currentPlayer === 'X') {
         currentPlayer = 'O';
@@ -126,11 +126,13 @@ function startGame() {
         button.innerHTML = "";
         button.style.boxShadow = 'none';
         button.style.backgroundColor = '#FFE8D6';
-         // Clear interval in winBtnAnimation function. 
-         // Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp
-        clearInterval(winnerIntervalId); // Removes blinking effects.
-        button.classList.remove('xBtn', 'oBtn'); // Removes classes xBtn and oBtn added in function setPlayerOnBtn. 
-        // Found solution : https://developer.mozilla.org/en-US/docs/Web/API/Element/classList. 
+        /** Clear interval in winBtnAnimation function. Removes blinking effects.
+         * Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp  */
+        clearInterval(winnerIntervalId); 
+        button.classList.remove('xBtn', 'oBtn'); 
+        /**Removes classes xBtn and oBtn added in function setPlayerOnBtn.
+         * Found solution : https://developer.mozilla.org/en-US/docs/Web/API/Element/classList. 
+          */
     }
 
     for (let button of buttons) {
@@ -146,8 +148,9 @@ function restartGame() {
         startButton.id = 'restart-btn'; // If start-btn exist rename it to restart-btn.
         startButton.innerHTML = "RESTART";
         startButton.style.display = "block";
-        // Because the button have changed id 
-        //a new event listener that listens for the new id is needed. 
+        /**Because the button have changed id
+         * a new event listener that listens for the new id is needed. 
+         */
         document.getElementById('restart-btn').addEventListener('click', startGame); 
     } 
     if (restartButton !== null) {

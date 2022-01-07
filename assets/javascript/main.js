@@ -1,9 +1,9 @@
 let currentPlayer = "not assigned";
-let winnerIntervalId; 
 const playerOColor = '#3C4030';
 const playerXColor = '#60463B';
 const playerOText = 'O';
 const playerXText = 'X';
+let winnerIntervalId; 
 
 /* Add eventlistener first when DOM is finish loading. */ 
 document.addEventListener("DOMContentLoaded", function () {
@@ -44,13 +44,13 @@ function generateRandomPlayer() {
 }
 
 /* Using the global variable currentPlayer to set the player on the button. */ 
-function setPlayerOnBtn(button) {    
-    if (currentPlayer === 'X') {
-        button.innerHTML = 'X';
+function setPlayerOnBtn(button) {  
+    if (currentPlayer === playerXText) {
+        button.innerHTML = playerXText;
         button.classList.add('xBtn'); /* Add a class to pressed button. Class used to style button in css. */
         button.style.boxShadow ='inset 0 5px 15px 0 rgba(0,0,0, .15)';
     } else {
-        button.innerHTML = 'O';
+        button.innerHTML = playerOText;
         button.classList.add('oBtn'); /* Add a class to pressed button. Class used to style button in css. */
         button.style.boxShadow ='inset 0 5px 15px 0 rgba(0,0,0, .15)'; 
     }

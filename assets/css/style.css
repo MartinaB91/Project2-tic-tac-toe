@@ -23,6 +23,11 @@ h1 {
     color: #FFE8D6;
 }
 
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
 button {
     font-family : inherit;
 }
@@ -37,8 +42,21 @@ span {
 }
 
 /* styling div info */
-#info {
+#players-info {
     margin-left: 6%;
+}
+
+#game-info {
+    background-color: rgba(165, 165, 141, 0.8);
+    position: absolute;
+    width: 90%;
+    top: 9%;
+    margin: 0 5%;
+}
+
+#game-info-text {
+    text-align: center;
+    margin-bottom: 2%;
 }
 
 /* Styling div game */
@@ -50,7 +68,7 @@ span {
     margin: auto;
     box-shadow: 0 10px 60px 0 rgba(0,0,0, .25);
     border-radius: 0.5rem;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* Styling game board */
@@ -142,7 +160,7 @@ span {
         border-radius: 0;
     }
     /* Styling div info */
-    #info {
+    #players-info {
         text-align: center;
         margin-left: 0;
     }

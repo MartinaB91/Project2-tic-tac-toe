@@ -3,6 +3,7 @@ const playerOColor = '#3C4030';
 const playerXColor = '#60463B';
 const playerOText = 'O';
 const playerXText = 'X';
+const tileButtonShadow = 'inset 0 5px 15px 0 rgba(0,0,0, .15)';
 let winnerIntervalId; 
 
 /* Add eventlistener first when DOM is finish loading. */ 
@@ -48,11 +49,11 @@ function setPlayerOnBtn(button) {
     if (currentPlayer === playerXText) {
         button.innerHTML = playerXText;
         button.classList.add('xBtn'); /* Add a class to pressed button. Class used to style button in css. */
-        button.style.boxShadow ='inset 0 5px 15px 0 rgba(0,0,0, .15)';
+        button.style.boxShadow = tileButtonShadow;
     } else {
         button.innerHTML = playerOText;
         button.classList.add('oBtn'); /* Add a class to pressed button. Class used to style button in css. */
-        button.style.boxShadow ='inset 0 5px 15px 0 rgba(0,0,0, .15)'; 
+        button.style.boxShadow = tileButtonShadow; 
     }
 }
 
@@ -67,15 +68,7 @@ function changePlayer() {
 
 /* Checks all the differents ways the player can win to se if someone has won. */
 function checkIfWin() {
-    let btn1 = document.getElementById('btn-tile-1');
-    let btn2 = document.getElementById('btn-tile-2');
-    let btn3 = document.getElementById('btn-tile-3');
-    let btn4 = document.getElementById('btn-tile-4');
-    let btn5 = document.getElementById('btn-tile-5');
-    let btn6 = document.getElementById('btn-tile-6');
-    let btn7 = document.getElementById('btn-tile-7');
-    let btn8 = document.getElementById('btn-tile-8');
-    let btn9 = document.getElementById('btn-tile-9');
+    let btn = document.getElementsByClassName('tile-btn');
 
     function winScenarios(btnA, btnB, btnC) {
         if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
@@ -89,17 +82,16 @@ function checkIfWin() {
         }
         return 0;
     }
-
     let winCount = 0;
 
-    winCount += winScenarios(btn1, btn2, btn3); /* First row horizontal. */
-    winCount += winScenarios(btn4, btn5, btn6); /* Second row horizontal. */
-    winCount += winScenarios(btn7, btn8, btn9); /* Third row horizontal. */
-    winCount += winScenarios(btn1, btn4, btn7); /* First row vertical. */
-    winCount += winScenarios(btn2, btn5, btn8); /* Second row vertical. */
-    winCount += winScenarios(btn3, btn6, btn9); /* Second row vertical. */
-    winCount += winScenarios(btn3, btn5, btn7); /* Diagonally right to bottom. */
-    winCount += winScenarios(btn1, btn5, btn9); /* Diagonally left to bottom */
+    winCount += winScenarios(btn[0], btn[1], btn[2]); /* First row horizontal. */
+    winCount += winScenarios(btn[3], btn[4], btn[5]); /* Second row horizontal. */
+    winCount += winScenarios(btn[6], btn[7], btn[8]); /* Third row horizontal. */
+    winCount += winScenarios(btn[0], btn[3], btn[6]); /* First row vertical. */
+    winCount += winScenarios(btn[1], btn[4], btn[7]); /* Second row vertical. */
+    winCount += winScenarios(btn[2], btn[5], btn[8]); /* Second row vertical. */
+    winCount += winScenarios(btn[2], btn[4], btn[6]); /* Diagonally right to bottom. */
+    winCount += winScenarios(btn[0], btn[4], btn[8]); /* Diagonally left to bottom */
 
     /**To prevent draw happening if someone wins at the last turn.
      * The checkIfDraw function is only called when someone hasen't won  */

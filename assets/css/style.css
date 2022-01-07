@@ -6,7 +6,7 @@ body {
 
 body {
     background-color: #A5A58D;
-    background-image: url('../images/pexels-rudolf-jakkel-418831-min.jpg');
+    background-image: url('../images/forest.jpg');
     background-repeat: no-repeat;
     font-family: 'Shadows Into Light', cursive;
     background-position: center center;
@@ -97,7 +97,7 @@ span {
     right: 23%;
 }
 
-/* Styling X and O game board buttons*/
+/* Styling X and O game board text*/
 .xBtn {
     font-size: 500%;
     color: #60463B;
@@ -175,7 +175,7 @@ span {
     }
 
    
-    /* Styling X and O game board buttons*/
+    /* Styling X and O game board text*/
     .xBtn {
         font-size: 300%;
     }

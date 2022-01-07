@@ -1,5 +1,9 @@
 let currentPlayer = "not assigned";
 let winnerIntervalId; 
+const playerOColor = '#3C4030';
+const playerXColor = '#60463B';
+const playerOText = 'O';
+const playerXText = 'X';
 
 /* Add eventlistener first when DOM is finish loading. */ 
 document.addEventListener("DOMContentLoaded", function () {
@@ -182,28 +186,25 @@ function checkIfDraw() {
 }
 /** Write out whose turn it is. The first time we want to write out
  *  the current player that is loaded with the DOM so the user can se which player starts playing.
- *  After that we want to write out the next player that is going to play. */ 
-function writeOutPlayer(firstTurn) {
+ *  After that we want to write out the next player that is going to play. 
+ *  Help from mentor with structuring function.*/ 
+ function writeOutPlayer(firstTurn) {
     let nextPlayer = document.getElementById('player');
+    let nextPlayerText;
+    let nextPlayerColor;
 
-    if (firstTurn) {
-        if (currentPlayer === 'O') {
-            nextPlayer.innerHTML = 'O';
-            nextPlayer.style.color = '#3C4030';
-        } else {
-            nextPlayer.innerHTML = 'X';
-            nextPlayer.style.color = '#60463B';
-        }
+    if ((firstTurn && currentPlayer === playerOText) || (!firstTurn && currentPlayer === playerXText)) {
+        nextPlayerText = playerOText;
+        nextPlayerColor = playerOColor;
     } else {
-        if (currentPlayer === 'X') {
-            nextPlayer.innerHTML = 'O';
-            nextPlayer.style.color = '#3C4030';
-        } else {
-            nextPlayer.innerHTML = 'X';
-            nextPlayer.style.color = '#60463B';
-        }
+        nextPlayerText = playerXText;
+        nextPlayerColor = playerXColor;
     }
+
+    nextPlayer.innerHTML = nextPlayerText;
+    nextPlayer.style.color = nextPlayerColor;
 }
+
 
 /* Add one point to the winning player. */
 function setScoreCountWinner() {

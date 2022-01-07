@@ -20,6 +20,7 @@ h1 {
     text-align: center;
     margin: 2% 0 0;
     text-transform: uppercase;
+    background-color: #00000096;
     color: #FFE8D6;
 }
 
@@ -47,17 +48,20 @@ span {
 }
 
 #game-info {
-    background-color: rgba(165, 165, 141, 0.8);
+    background-color: rgba(165, 165, 141, 0.9);
     border-radius: 0.5rem;
+    border: 3px solid black;
+    box-shadow: 0 10px 25px 0 rgba(0,0,0, .15);
     position: absolute;
     width: 90%;
-    top: 9%;
+    top: 10%;
     margin: 0 5%;
 }
 
 #game-info-text {
     text-align: center;
     margin-bottom: 2%;
+    margin-top: 0;
 }
 
 /* Styling div game */
@@ -91,10 +95,12 @@ span {
 
 /* Styling start/restart button */
 #start-btn {
-    background-color: rgb(221, 190, 169, 0.8); 
+    /* background-color: rgb(221, 190, 169, 0.8);  */
+    background-color: #00000096;
     box-shadow: 0 10px 25px 0 rgba(0,0,0, .25);
     border-radius: 0.5rem;
     color: black;
+    color: #FFE8D6;
     font-size: 400%;
     font-weight: bold;
     position: absolute;
@@ -169,6 +175,14 @@ span {
     #players {
         margin: 0;
     }
+
+    #game-info {
+        width: 88%;
+        margin: 3%;
+        padding: 0 2%;
+        border-radius: 0;
+        top: -2%;
+    }
     /*Styling game board */
     #board {
         width: 17rem;
@@ -182,7 +196,8 @@ span {
 
     /* Styling start/restart button */ 
     #start-btn {
-        top: 38%;
+        /* top: 38%; */
+        top: 60%;
         right: 25%;
         font-size: 300%;
     }

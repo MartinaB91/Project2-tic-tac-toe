@@ -108,6 +108,7 @@ function checkIfWin() {
 /* Hides the start/restart button, reset the buttons and make the buttons clickable. */ 
 function startGame() {
     let startButton = document.getElementById('start-btn');
+    let gameInfoText = document.getElementById('game-info'); /* Hides game rules after start button is clicked. */
 
     /** 
      * Removes the start button if it exists, if the start buttons is null 
@@ -115,6 +116,7 @@ function startGame() {
      * https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null*/
     if (startButton !== null) { 
         startButton.style.display = 'none';
+        gameInfoText.style.display = 'none';
     } 
     if(startButton == null) { 
         let restartButton = document.getElementById('restart-btn');
@@ -170,9 +172,9 @@ function restartGame() {
 /* Checks if every button is claimed. If they are the result is draw. */
 function checkIfDraw() {
     const allClickableTiles = 9; 
-    let buttons = document.getElementsByClassName('tile-btn');
     let countClickedButtons = 0;
-
+    let buttons = document.getElementsByClassName('tile-btn');
+   
     for (let button of buttons) {
 
         if (button.disabled === true) {

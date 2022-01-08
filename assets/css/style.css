@@ -18,9 +18,12 @@ h1 {
     font-size: 500%;
     font-weight: bolder;
     text-align: center;
-    margin: 2% 0 0;
+    /* margin: 2% 0 0; */
+    margin: 2% auto 0;
+    width: 40%;
     text-transform: uppercase;
     background-color: #00000096;
+    border-radius: 0.5rem;
     color: #FFE8D6;
 }
 
@@ -160,6 +163,8 @@ span {
     h1 {
         font-size: 300%;
         margin: 3% 0 7% 0;
+        width: 100%;
+        border-radius: 0;
     }
     /* Styling div game */
     #game {

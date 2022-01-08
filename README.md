@@ -19,45 +19,51 @@ For typography ‘Shadows into light’ witch fallback cursive is used. This sty
 In this section you will find out more about the different features this site contains. All features is located in the ”box”. This design were choosen to give the site a clean design and make the game blend with the background. This also make it easier for the user to see all the features. 
 ### Tic Tac Toe header
 - The header of the page is centered at the top of the page, this will be the first thing the user sees. Since Tic Tac Toe is a well-known classic game the user will instantly understand the purpose of the site.
+### Rules area
+- When you first enter the page, the rules of the game is displayed over the game board. This shows the user right away that you need to be two players that plays on the same device. 
 ### Next player area
 - The next player area is a text field showing who’s up next, to make it more clear for the user X and O has different colors. Colors used in next player area is the same as colors used on game board.
 ### Game board area
 - The game board area is a three-by-three grid.
 ### X and O button
-- When a user clicks on a tile the button gets a shadowy effect and the current player (X or O) is presented on the button to show that the button is claimed.
-
-- X and O has different colors on their claimed tiles, this is to make it clearer who has what.
+- When a user clicks on a tile the button gets a shadowy effect and the current player (X or O) is presented on the button to show that the button is claimed. X and O has different colors on their claimed tiles, this is to make it clearer who has what.
 ### Points area 
 - In this area the score is presented, we can see how many games won by X or O or games that ended in draw. As before the players have different colors on the scores, the same as on the game board and next player area.
 ### Start button/Restart button
 - The same style and placement are used for restart and start, just different text. Located at the center of the board it is impossible for the user to miss.
+- On the mobile device the start button is dispalyed at the lower part of the game board. This is to make space for the game rules. 
 ## Test and validation
+Read more about test and validation [here](/TEST.md)
 ### Validations
 ## Bugs corrections and improvements
 ### Unfixed bugs
+- There are no known bugs.
 ### Future improvements
+- In this version of the game only two players on the same device are supported. In the future adding the possibility to play against the computer would give the users more ways to enjoy the game.
+- Another improvement would be allowing the users to add names while playing and saving the scores from different sessions. A fun feature allowing users to have long running competitions. 
 ## Deployment
 ## Credits
+This section describes code, content and media and tools that were used when building this site. 
 ### Code
-[Developer drive – Grid system](https://www.developerdrive.com/how-to-create-a-css-grid-step-by-step ): Used for building grid system for game board.
+[Developer drive – Grid system](https://www.developerdrive.com/how-to-create-a-css-grid-step-by-step ): Used as guide for building grid system for game board.
 
-[Codeinwp – Event listener](https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/): Used when adding event listeners for game board buttons.
+[Codeinwp – Event listener](https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/): Used as guide when adding event listeners.
 
-[Flexible – Disable buttons](https://flexiple.com/disable-button-javascript/): Used on game board to disabled buttons.
+[Flexible – Disable buttons](https://flexiple.com/disable-button-javascript/): Used as guide for disabling buttons.
 
-[PY4U.NET - Text-flash](https://www.py4u.net/discuss/301230): Used for making game board buttons blink when someone winns or the game is draw. 
+[PY4U.NET - Text-flash](https://www.py4u.net/discuss/301230): Used as guide for making game board buttons blink when someone winns or the game is draw. 
 
-[Youtube – Kevin Powell](https://www.youtube.com/watch?v=Yon4l3MUBGY): Used for making box-shadow on gameboard and buttons. 
+[Youtube – Kevin Powell](https://www.youtube.com/watch?v=Yon4l3MUBGY): Used as guide for making box-shadow on gameboard and buttons. 
 
-[Stackoverflow – undefined or null](https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null): Used for if statement checking if start button is null.
+[Stackoverflow – undefined or null](https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null): Used as guide for checking if null.
 
-[w3school - Clear interval](https://www.w3schools.com/jsref/met_win_clearinterval.asp): Used for remove blinking effects on game board buttons when restarting the game. 
+[w3school - Clear interval](https://www.w3schools.com/jsref/met_win_clearinterval.asp): Used as guide for removing blinking effects on game board buttons when restarting the game. 
 
-[MDN Web Docs – Element.classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList): Used for remove earlier added classes from X and O buttons before a new round of the game starts. 
+[MDN Web Docs – Element.classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList): Used as guide for removing earlier added classes from X and O buttons when restarting the game.
 ### Content and media
 [Google fonts](https://fonts.google.com/): Used for all text. 
 
-[Pexels](https://www.pexels.com/): The background picture is from Pexels. 
+[Pexels](https://www.pexels.com/): The background image is from Pexels. 
 ### Tools
 [Coolors](https://coolors.co/palettes/trending ): Used for finding colors that go well together. 
 

@@ -1,9 +1,19 @@
 # Tic Tac Toe
 ## Introduction
-This page contains the classic game Tic Tac Toe. The game is played on a three-by-three board and X plays against O and the winner is the one with three in a row. Here to players can play against each other on the same device, perhaps suiting colleagues playing on the coffee break.
+This page contains a version of the classic game Tic Tac Toe. The game is played on a three-by-three board and X plays against O and the winner is the one with three in a row. Here to players can play against each other on the same device, perhaps suiting colleagues playing on the coffee break.
 ## UX/Design
+In this section the user experience and design of the site is discussed. Many other games have strong visual effects and colors. This site is designed with the intention to look clean and calming.  For example blinking effects when winnning or draw is displayed in a  beige color. 
+### User stories 
+- As a user I want to play Tic Tac Toe with a friend on the same device, because it's a fun game.
+- As a user I want to quickly understand the sites purpose to see if this is this site have what im looking for.
+- As a user I want to quickly understand how the game works to know how to play it.
+- As a user I want it to be easy to start playing, so i don't have to waste time. 
+- As a user I want it to be easy to see when it's my turn, so idon't have to keep track on my own.
+- As a user I want it to know the score, so I know who's winning.
 ### Color-scheme
+The colors chosen for the game is tones of green, beige and brown. These earthy colors combined with the background image of a forest gives the user a peaceful experience while playing. 
 ### Typography
+For typography ‘Shadows into light’ witch fallback cursive is used. This style stands out while not stealing focus. 
 ### Wireframes
 ## Features
 In this section you will find out more about the different features this site contains. All features is located in the ”box”. This design were choosen to give the site a clean design and make the game blend with the background. This also make it easier for the user to see all the features. 

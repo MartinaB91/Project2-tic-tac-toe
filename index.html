@@ -4,11 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- TODO: Read more about viewport and see why this seems needed. -->
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-   <!-- https://stackoverflow.com/questions/15365750/viewport-tag-not-working-on-chrome -->
-   <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="keywords" content="Game, Tic tac toe">
    <meta name="description" content="Play the classic game Tic Tac Toe with a friend.">
    <!-- Stylesheet -->
@@ -35,15 +31,15 @@
       </div>
       <!--Game board buttons-->
       <div id="board">
-         <button class="tile-btn" id="btn-tile-1"></button>
-         <button class="tile-btn" id="btn-tile-2"></button>
-         <button class="tile-btn" id="btn-tile-3"></button>
-         <button class="tile-btn" id="btn-tile-4"></button>
-         <button class="tile-btn" id="btn-tile-5"></button>
-         <button class="tile-btn" id="btn-tile-6"></button>
-         <button class="tile-btn" id="btn-tile-7"></button>
-         <button class="tile-btn" id="btn-tile-8"></button>
-         <button class="tile-btn" id="btn-tile-9"></button>
+         <button class="tile-btn" id="btn-tile-1" aria-label="tile one row one game board"></button>
+         <button class="tile-btn" id="btn-tile-2" aria-label="tile two row one game board"></button>
+         <button class="tile-btn" id="btn-tile-3" aria-label="tile three row one game board"></button>
+         <button class="tile-btn" id="btn-tile-4" aria-label="tile one row two game board"></button>
+         <button class="tile-btn" id="btn-tile-5" aria-label="tile two row two game board"></button>
+         <button class="tile-btn" id="btn-tile-6" aria-label="tile three row two game board"></button>
+         <button class="tile-btn" id="btn-tile-7" aria-label="tile one row three game board"></button>
+         <button class="tile-btn" id="btn-tile-8" aria-label="tile two row three game board"></button>
+         <button class="tile-btn" id="btn-tile-9" aria-label="tile three row three game board"></button>
       </div>
       <div id="score">
          <p class="scores" id="scoreTextPlayer">Player <span id="scoreTextX">X: </span><span id="scoresPlayerX">0</span>
@@ -53,6 +49,7 @@
       </div>
    </section>
    <!-- Javascript -->
+   <script src="assets/javascript/globals.js"></script>
    <script src="assets/javascript/main.js"></script>
    <!-- <script src="assets/javascript/utils.js"></script> -->
 </body>

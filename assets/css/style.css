@@ -18,9 +18,8 @@ h1 {
     font-size: 500%;
     font-weight: bolder;
     text-align: center;
-    /* margin: 2% 0 0; */
     margin: 2% auto 0;
-    width: 40%;
+    width: 37%;
     text-transform: uppercase;
     background-color: #00000096;
     border-radius: 0.5rem;
@@ -58,7 +57,7 @@ span {
     position: absolute;
     width: 90%;
     top: 10%;
-    margin: 0 5%;
+    margin: 0 4%;
 }
 
 #game-info-text {
@@ -73,7 +72,7 @@ span {
     width: 32rem;
     background-color: rgba(165, 165, 141, 0.8);
     position: relative;
-    margin: auto;
+    margin: 0 auto 5%;
     box-shadow: 0 10px 60px 0 rgba(0,0,0, .25);
     border-radius: 0.5rem;
     box-sizing: border-box;
@@ -98,12 +97,10 @@ span {
 
 /* Styling start/restart button */
 #start-btn {
-    /* background-color: rgb(221, 190, 169, 0.8);  */
-    background-color: #00000096;
+    background-color: rgb(221, 190, 169, 0.8); 
     box-shadow: 0 10px 25px 0 rgba(0,0,0, .25);
     border-radius: 0.5rem;
     color: black;
-    color: #FFE8D6;
     font-size: 400%;
     font-weight: bold;
     position: absolute;
@@ -201,7 +198,6 @@ span {
 
     /* Styling start/restart button */ 
     #start-btn {
-        /* top: 38%; */
         top: 60%;
         right: 25%;
         font-size: 300%;
@@ -225,7 +221,7 @@ span {
 
     /* Styling div score */
     .scores {
-        display: 0;
+        display: none;
        margin: 0 0 0 5%;
     }
 
@@ -237,6 +233,7 @@ span {
 /* Media queries for medium devices */
 @media screen and (min-width: 481px) and (max-width: 768px) {
     h1 {
-        margin: 12% 0 7% 0;
+        width: 70%;
+        margin: 10% auto 0;
     }
 }

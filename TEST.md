@@ -15,7 +15,7 @@ Description: Blinking function when winning.
 | ----------- | ----------- |------------|
 |1.|  Play game until winning first row horizontally.   |  First row horizontally buttons is blinking. |
 |2.|  Press restart.      |  Blinking ends and new round started. |
-|3.|    Repeat step 1-2 until every winning scenario is tested (vertically, horisontally and diagonally. Totally eight scenarios).|   |
+|3.|    Repeat step 1-2 until every winning scenario is tested(vertically, horisontally and diagonally. Totally eight scenarios).|   |
 
 ### Test case 3
 Description: Blinking function when draw.
@@ -66,3 +66,10 @@ The game has been played on small devices(iPhone 5), medium devices (iPad),large
 | Test 6 |     |     |     |
 
 ## Validations 
+The CSS, HMTL and Javascript has been validated without any errors or warnings.
+
+Validator used for [HTML](https://validator.w3.org/).
+
+Validator used for [CSS](https://jigsaw.w3.org/css-validator/).
+
+Validator used for [Javascript](https://jshint.com/).

@@ -19,19 +19,48 @@ For typography ‘Shadows into light’ witch fallback cursive is used. This sty
 In this section you will find out more about the different features this site contains. All features is located in the ”box”. This design were choosen to give the site a clean design and make the game blend with the background. This also make it easier for the user to see all the features. 
 ### Tic Tac Toe header
 - The header of the page is centered at the top of the page, this will be the first thing the user sees. Since Tic Tac Toe is a well-known classic game the user will instantly understand the purpose of the site.
+
+<img src="assets/readme-images/h1.PNG" width= 90%>
+
 ### Rules area
 - When you first enter the page, the rules of the game is displayed over the game board. This shows the user right away that you need to be two players that plays on the same device. 
+
+<img src="assets/readme-images/rules.PNG" width= 90%>
+
 ### Next player area
 - The next player area is a text field showing who’s up next, to make it more clear for the user X and O has different colors. Colors used in next player area is the same as colors used on game board.
+
+<img src="assets/readme-images/next-player.PNG" width= 90%>
+
 ### Game board area
 - The game board area is a three-by-three grid.
+
+<img src="assets/readme-images/game-board.PNG" width= 90%>
+
 ### X and O button
 - When a user clicks on a tile the button gets a shadowy effect and the current player (X or O) is presented on the button to show that the button is claimed. X and O has different colors on their claimed tiles, this is to make it clearer who has what.
+
+<img src="assets/readme-images/x-and-o-button.PNG" width= 90%>
+
 ### Points area 
 - In this area the score is presented, we can see how many games won by X or O or games that ended in draw. As before the players have different colors on the scores, the same as on the game board and next player area.
+
+<img src="assets/readme-images/score.PNG" width= 90%>
+
 ### Start button/Restart button
 - The same style and placement are used for restart and start, just different text. Located at the center of the board it is impossible for the user to miss.
-- On the mobile device the start button is dispalyed at the lower part of the game board. This is to make space for the game rules. 
+- On the mobile device the start button is dispalyed at the lower part of the game board. This is to make space for the game rules.
+
+### Winning player animation 
+- When a player wins it will be shown by a beige flashing on the winning combination. 
+
+<img src="assets/readme-images/winning.PNG" width= 90%>
+
+### Draw animation
+- When the game is draw it will be shown by a blinking X over the game board. 
+
+<img src="assets/readme-images/draw.PNG" width= 90%>
+
 ## Test and validation
 Read more about test and validation [here](/TEST.md)
 ### Validations

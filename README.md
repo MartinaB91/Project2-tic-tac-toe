@@ -11,10 +11,19 @@ In this section the user experience and design of the site is discussed. Many ot
 - As a user I want it to be easy to see when it's my turn, so idon't have to keep track on my own.
 - As a user I want it to know the score, so I know who's winning.
 ### Color-scheme
-The colors chosen for the game is tones of green, beige and brown. These earthy colors combined with the background image of a forest gives the user a peaceful experience while playing. 
+- The colors chosen for the game is tones of green, beige and brown. These earthy colors combined with the background image of a forest gives the user a peaceful experience while playing.
+
+- Letter X (#60463B), start/restart button and blinking effects (#DDBEA9), background color game board (#C2C5AA) letter O (#6B705C). For letter O on 'Next player' and 'Score' a darker shade of green was used to increase the contrast (#535747). 
+
+<img src="assets/readme-images/colors.PNG" width= 90%>
+
+
 ### Typography
 For typography ‘Shadows into light’ witch fallback cursive is used. This style stands out while not stealing focus. 
 ### Wireframes
+
+<img src="assets/readme-images/wireframe.jpg">
+
 ## Features
 In this section you will find out more about the different features this site contains. All features is located in the ”box”. This design were choosen to give the site a clean design and make the game blend with the background. This also make it easier for the user to see all the features. 
 ### Tic Tac Toe header
@@ -51,6 +60,8 @@ In this section you will find out more about the different features this site co
 - The same style and placement are used for restart and start, just different text. Located at the center of the board it is impossible for the user to miss.
 - On the mobile device the start button is dispalyed at the lower part of the game board. This is to make space for the game rules.
 
+<img src="assets/readme-images/start-button.PNG" width= 45% height= 100rem> <img src="assets/readme-images/restart-button.PNG" width= 45% height= 100rem>
+
 ### Winning player animation 
 - When a player wins it will be shown by a beige flashing on the winning combination. 
 
@@ -63,7 +74,6 @@ In this section you will find out more about the different features this site co
 
 ## Test and validation
 Read more about test and validation [here](/TEST.md)
-### Validations
 ## Bugs corrections and improvements
 ### Unfixed bugs
 - There are no known bugs.
@@ -99,5 +109,6 @@ This section describes code, content and media and tools that were used when bui
 [HTML color codes](https://www.hexcolortool.com/): Used to make the green used for player O button darker.
 
 [HexToRGB](https://www.hextorgb.co/ ): For convert hex to rgb this converter were used. 
+
 
 

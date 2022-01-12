@@ -78,9 +78,14 @@ Read more about test and validation [here](/TEST.md)
 ### Unfixed bugs
 - There are no known bugs
 ### Solved bugs 
-- 
+- Bug when the need for individual styling of start button occured. The same button is used for start and restart game but the placement of the button is different because of the size of the button. Start/Restart needs different styling to be placed in the center of the game board. When added a new id, the restart button was always visible. Solved by adding if-statements that checks if button is null or not depending on the id.
+
+- Bug blinking animation when winning. When the game has finished the blinking animation could change pattern if the user clicked a tile that have not been clicked. Solved by disabeling all buttons when someone has won. 
+
+- Chrome Devtools report the following error: "https://8000-teal-squirrel-aamz0q95.ws-eu25.gitpod.io/favicon.ico 404. . Solved by adding a favicon that is in png format. 
 ### Future improvements
 - In this version of the game only two players on the same device are supported. In the future adding the possibility to play against the computer would give the users more ways to enjoy the game.
+
 - Another improvement would be allowing the users to add names while playing and saving the scores from different sessions. A fun feature allowing users to have long running competitions. 
 ## Deployment
 ## Credits

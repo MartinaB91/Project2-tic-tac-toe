@@ -20,7 +20,7 @@ In this section the user experience and design of the site is discussed. Many ot
 
 ### Typography
 For typography ‘Shadows into light’ witch fallback cursive is used. This style stands out while not stealing focus. 
-### Wireframes
+### Wireframe
 
 <img src="assets/readme-images/wireframe.jpg">
 
@@ -49,7 +49,7 @@ In this section you will find out more about the different features this site co
 ### X and O button
 - When a user clicks on a tile the button gets a shadowy effect and the current player (X or O) is presented on the button to show that the button is claimed. X and O has different colors on their claimed tiles, this is to make it clearer who has what.
 
-<img src="assets/readme-images/x-and-o-button.PNG" width= 90%>
+<img src="assets/readme-images/x-and-o-button.PNG" width= 50%>
 
 ### Points area 
 - In this area the score is presented, we can see how many games won by X or O or games that ended in draw. As before the players have different colors on the scores, the same as on the game board and next player area.
@@ -60,7 +60,9 @@ In this section you will find out more about the different features this site co
 - The same style and placement are used for restart and start, just different text. Located at the center of the board it is impossible for the user to miss.
 - On the mobile device the start button is dispalyed at the lower part of the game board. This is to make space for the game rules.
 
-<img src="assets/readme-images/start-button.PNG" width= 45% height= 100rem> <img src="assets/readme-images/restart-button.PNG" width= 45% height= 100rem>
+<img src="assets/readme-images/start-button.PNG" width= 50% > 
+
+<img src="assets/readme-images/restart-button.PNG" width= 50%>
 
 ### Winning player animation 
 - When a player wins it will be shown by a beige flashing on the winning combination. 
@@ -82,14 +84,15 @@ Read more about test and validation [here](/TEST.md)
 
 - Bug blinking animation when winning. When the game has finished the blinking animation could change pattern if the user clicked a tile that have not been clicked. Solved by disabeling all buttons when someone has won. 
 
-- Chrome Devtools report the following error: "https://8000-teal-squirrel-aamz0q95.ws-eu25.gitpod.io/favicon.ico 404. . Solved by adding a favicon that is in png format. 
+- Chrome Devtools report the following error: "https://8000-teal-squirrel-aamz0q95.ws-eu25.gitpod.io/favicon.ico 404." . Solved by adding a favicon that is in png format. 
 ### Future improvements
 - In this version of the game only two players on the same device are supported. In the future adding the possibility to play against the computer would give the users more ways to enjoy the game.
 
 - Another improvement would be allowing the users to add names while playing and saving the scores from different sessions. A fun feature allowing users to have long running competitions. 
 ## Deployment
 ## Credits
-This section describes code, content and media and tools that were used when building this site. 
+This section describes code, content and media and tools that were used when building this site. Special thanks to my mentor Reuben Ferrante for great ideas and support.
+
 ### Code
 [Developer drive – Grid system](https://www.developerdrive.com/how-to-create-a-css-grid-step-by-step ): Used as guide for building grid system for game board.
 

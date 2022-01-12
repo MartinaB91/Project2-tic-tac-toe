@@ -90,6 +90,15 @@ Read more about test and validation [here](/TEST.md)
 
 - Another improvement would be allowing the users to add names while playing and saving the scores from different sessions. A fun feature allowing users to have long running competitions. 
 ## Deployment
+This section describes how the site was deployed. The project was deployed to GitHub Pages. 
+
+1. Log in  to GitHub and choose the repository.
+2. Go to the 'Settings' button. Located just above repository content.
+3. Scroll down the page until you can find 'Pages' (or choose 'Pages' in the menu to the left).
+4. In section 'Source', click the dropdown menu with value 'None' and select 'main'.
+5. Wait until GitHub has created yor link to the deployed site. 
+6. Scroll back down through the page to locate the published site link in the section 'Pages'.
+
 ## Credits
 This section describes code, content and media and tools that were used when building this site. Special thanks to my mentor Reuben Ferrante for great ideas and support.
 

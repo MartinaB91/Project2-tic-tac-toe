@@ -183,7 +183,7 @@ span {
         width: 88%;
         margin: 3%;
         padding: 0 2%;
-        border-radius: 0;
+        border-radius: 0.5rem;
         top: -2%;
     }
     /*Styling game board */
@@ -199,14 +199,14 @@ span {
 
     /* Styling start/restart button */ 
     #start-btn {
-        top: 60%;
-        right: 25%;
+        top: 55%;
+        right: 29%;
         font-size: 300%;
     }
 
     #restart-btn {
         top: 38%;
-        right: 18%;
+        right: 23%;
         font-size: 300%;
     }
 
@@ -222,13 +222,9 @@ span {
 
     /* Styling div score */
     .scores {
-        display: none;
        margin: 0 0 0 5%;
     }
 
-    #scoreTextPlayer {
-        margin-left: 5%;
-    }
 }
 
 /* Media queries for medium devices */

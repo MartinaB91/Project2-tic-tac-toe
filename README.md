@@ -76,7 +76,9 @@ In this section you will find out more about the different features this site co
 Read more about test and validation [here](/TEST.md)
 ## Bugs corrections and improvements
 ### Unfixed bugs
-- There are no known bugs.
+- There are no known bugs
+### Solved bugs 
+- 
 ### Future improvements
 - In this version of the game only two players on the same device are supported. In the future adding the possibility to play against the computer would give the users more ways to enjoy the game.
 - Another improvement would be allowing the users to add names while playing and saving the scores from different sessions. A fun feature allowing users to have long running competitions. 
@@ -87,6 +89,8 @@ This section describes code, content and media and tools that were used when bui
 [Developer drive – Grid system](https://www.developerdrive.com/how-to-create-a-css-grid-step-by-step ): Used as guide for building grid system for game board.
 
 [Codeinwp – Event listener](https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/): Used as guide when adding event listeners.
+
+[Favicon](https://favicon.io/favicon-generator/): Used for creating favicon image.
 
 [Flexible – Disable buttons](https://flexiple.com/disable-button-javascript/): Used as guide for disabling buttons.
 

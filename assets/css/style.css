@@ -137,12 +137,18 @@ span {
 /* styling div score */
 .scores {
     display: inline-block;
-    margin-right: 12%;
     margin-top: 1%;
 }
 
-#scoreTextPlayer {
-    margin-left: 12%;
+#scoreTextPlayerX {
+    margin-left: 6%;
+    margin-right: 19%;
+    float: left;
+}
+
+#scoreTextPlayerO {
+    float: right;
+    margin-right: 6%;
 }
 
 #scoreTextX {
@@ -205,7 +211,7 @@ span {
     }
 
     #restart-btn {
-        top: 38%;
+        top: 36%;
         right: 23%;
         font-size: 300%;
     }
@@ -221,8 +227,9 @@ span {
     }
 
     /* Styling div score */
-    .scores {
-       margin: 0 0 0 5%;
+
+    #scoreTextPlayerX {
+        margin-right: 11%;
     }
 
 }

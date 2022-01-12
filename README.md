@@ -1,6 +1,9 @@
 # Tic Tac Toe
 ## Introduction
 This page contains a version of the classic game Tic Tac Toe. The game is played on a three-by-three board and X plays against O and the winner is the one with three in a row. Here to players can play against each other on the same device, perhaps suiting colleagues playing on the coffee break.
+
+<img src="assets/readme-images/amiresponsive.PNG" width= 90%>
+
 ## UX/Design
 In this section the user experience and design of the site is discussed. Many other games have strong visual effects and colors. This site is designed with the intention to look clean and calming.  For example blinking effects when winnning or draw is displayed in a  beige color. 
 ### User stories 

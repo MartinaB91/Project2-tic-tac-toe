@@ -1,58 +1,59 @@
 /* jshint esversion: 6 */
 
-/* Add eventlistener first when DOM is finish loading. */
+// Add eventlistener first when DOM is finish loading. 
 document.addEventListener("DOMContentLoaded", function () {
-	/* Eventlistener click for start button */
+	// Eventlistener click for start button.
 	document.getElementById('start-btn').addEventListener('click', startGame);
 
-	/* Eventlisteners click for game board buttons. */
+	// Eventlisteners click for game board buttons.
 	let buttons = document.getElementsByClassName('tile-btn');
 
 	for (let button of buttons) {
 		button.addEventListener('click', gameBoardBtnClick);
-		button.disabled = true; /* To make the buttons unclickable before game is started. */
+		button.disabled = true; // To make the buttons unclickable before game is started.
 	}
 
-	/* Initialize currentPlayer */
+	// Initialize currentPlayer.
 	generateRandomPlayer();
 
-	/* Shows witch player starts playing. */
+	// Shows witch player starts playing. 
 	writeOutPlayer(true);
 });
 
 /**
  * Main function that calls other functions and desides the order they are executed in. 
- * Main function is called every time a button on game board is clicked. */
+ * Main function is called every time a button on game board is clicked.
+ */
 function gameBoardBtnClick() {
 	let button = this;
-	button.disabled = true; /* For making button once clicked not clickable. */
-	writeOutPlayer(false); /* Writes out who is next in line. */
-	setPlayerOnBtn(button); /* Set player X/O on the button. */
-	checkIfWin(); /* Checks if someone has won or if the game is draw. */
-	changePlayer(); /* Change player. */
+	button.disabled = true; // For making button once clicked not clickable. 
+	writeOutPlayer(false); // Writes out who is next in line. 
+	setPlayerOnBtn(button); // Set player X/O on the button. 
+	checkIfWin(); // Checks if someone has won or if the game is draw. 
+	changePlayer(); // Change player. 
 }
 
-/* Randomize which player is first out to play X or O. */
+// Randomize which player is first out to play X or O. 
 function generateRandomPlayer() {
 	const players = ['X', 'O'];
 	const randomPlayer = Math.floor(Math.random() * players.length);
 	currentPlayer = (players[randomPlayer]);
 }
 
-/* Using the global variable currentPlayer to set the player on the button. */
+// Using the global variable currentPlayer to set the player on the button. 
 function setPlayerOnBtn(button) {
 	if (currentPlayer === playerXText) {
 		button.innerHTML = playerXText;
-		button.classList.add('xBtn'); /* Add a class to pressed button. Class used to style button in css. */
+		button.classList.add('xBtn'); // Add a class to pressed button. Class used to style button in css. 
 		button.style.boxShadow = tileButtonShadow;
 	} else {
 		button.innerHTML = playerOText;
-		button.classList.add('oBtn'); /* Add a class to pressed button. Class used to style button in css. */
+		button.classList.add('oBtn'); // Add a class to pressed button. Class used to style button in css. 
 		button.style.boxShadow = tileButtonShadow;
 	}
 }
 
-/* Changes who plays. */
+// Changes who plays.
 function changePlayer() {
 	if (currentPlayer === playerXText) {
 		currentPlayer = playerOText;
@@ -61,13 +62,13 @@ function changePlayer() {
 	}
 }
 
-/* Checks all the differents ways the player can win to se if someone has won. */
+// Checks all the differents ways the player can win to se if someone has won. 
 function checkIfWin() {
 	let btn = document.getElementsByClassName('tile-btn');
 
 	function winScenarios(btnA, btnB, btnC) {
 		if (btnA.innerHTML === currentPlayer && btnB.innerHTML === currentPlayer && btnC.innerHTML === currentPlayer) {
-			btnA.style.backgroundColor = colorWinningBtns; /* Shows the winning scenario by giving it a color. */
+			btnA.style.backgroundColor = colorWinningBtns; // Shows the winning scenario by giving it a color. 
 			btnB.style.backgroundColor = colorWinningBtns;
 			btnC.style.backgroundColor = colorWinningBtns;
 			winBtnAnimation(btnA, btnB, btnC);
@@ -79,32 +80,34 @@ function checkIfWin() {
 	}
 	let winCount = 0;
 
-	winCount += winScenarios(btn[0], btn[1], btn[2]); /* First row horizontal. */
-	winCount += winScenarios(btn[3], btn[4], btn[5]); /* Second row horizontal. */
-	winCount += winScenarios(btn[6], btn[7], btn[8]); /* Third row horizontal. */
-	winCount += winScenarios(btn[0], btn[3], btn[6]); /* First row vertical. */
-	winCount += winScenarios(btn[1], btn[4], btn[7]); /* Second row vertical. */
-	winCount += winScenarios(btn[2], btn[5], btn[8]); /* Second row vertical. */
-	winCount += winScenarios(btn[2], btn[4], btn[6]); /* Diagonally right to bottom. */
-	winCount += winScenarios(btn[0], btn[4], btn[8]); /* Diagonally left to bottom */
+	winCount += winScenarios(btn[0], btn[1], btn[2]); // First row horizontal. 
+	winCount += winScenarios(btn[3], btn[4], btn[5]); // Second row horizontal. 
+	winCount += winScenarios(btn[6], btn[7], btn[8]); // Third row horizontal. 
+	winCount += winScenarios(btn[0], btn[3], btn[6]); // First row vertical.
+	winCount += winScenarios(btn[1], btn[4], btn[7]); // Second row vertical. 
+	winCount += winScenarios(btn[2], btn[5], btn[8]); // Second row vertical. 
+	winCount += winScenarios(btn[2], btn[4], btn[6]); // Diagonally right to bottom. 
+	winCount += winScenarios(btn[0], btn[4], btn[8]); // Diagonally left to bottom.
 
 	/**
 	 * To prevent draw happening if someone wins at the last turn.
-	 * The checkIfDraw function is only called when someone hasen't won  */
+	 * The checkIfDraw function is only called when someone hasen't won  
+	 */
 	if (winCount === 0) {
 		checkIfDraw();
 	}
 }
 
-/* Hides the start/restart button, reset the buttons and make the buttons clickable. */
+// Hides the start/restart button, reset the buttons and make the buttons clickable. 
 function startGame() {
 	let startButton = document.getElementById('start-btn');
-	let gameInfoText = document.getElementById('game-info'); /* Hides game rules after start button is clicked. */
+	let gameInfoText = document.getElementById('game-info'); // Hides game rules after start button is clicked. 
 
 	/** 
 	 * Removes the start button if it exists, if the start buttons is null 
 	 * (doesent't exist) remove the restart button. 
-	 * https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null*/
+	 * https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null
+	 */
 	if (startButton !== null) {
 		startButton.style.display = 'none';
 		gameInfoText.style.display = 'none';
@@ -123,7 +126,8 @@ function startGame() {
 		button.style.backgroundColor = colorUnclickedBtns;
 		/** 
 		 * Clear interval in winBtnAnimation function. Removes blinking effects.
-		 * Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp  */
+		 * Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp  
+		 */
 		clearInterval(winnerIntervalId);
 		button.classList.remove('xBtn', 'oBtn');
 		/**
@@ -137,12 +141,12 @@ function startGame() {
 	}
 }
 
-/* Prepare the game for restart by changing name on button. */
+// Prepare the game for restart by changing name on button. 
 function restartGame() {
 	let startButton = document.getElementById('start-btn');
 	let restartButton = document.getElementById('restart-btn');
 	if (startButton !== null) {
-		startButton.id = 'restart-btn'; /* If start-btn exist rename it to restart-btn. */
+		startButton.id = 'restart-btn'; // If start-btn exist rename it to restart-btn.
 		startButton.innerHTML = restartButtonText;
 		startButton.style.display = restartButtonLayout;
 		/**
@@ -154,13 +158,13 @@ function restartGame() {
 	if (restartButton !== null) {
 		restartButton.style.display = restartButtonLayout;
 	}
-	let buttons = document.getElementsByClassName('tile-btn'); /* For making buttons unclickable when player has won. */
+	let buttons = document.getElementsByClassName('tile-btn'); // For making buttons unclickable when player has won. 
 	for (let button of buttons) {
 		button.disabled = true;
 	}
 }
 
-/* Checks if every button is claimed. If they are the result is draw. */
+// Checks if every button is claimed. If they are the result is draw. 
 function checkIfDraw() {
 	const allClickableTiles = 9;
 	let countClickedButtons = 0;
@@ -183,7 +187,8 @@ function checkIfDraw() {
  * Write out whose turn it is. The first time we want to write out
  *  the current player that is loaded with the DOM so the user can se which player starts playing.
  *  After that we want to write out the next player that is going to play. 
- *  Help from mentor with structuring function.*/
+ *  Help from mentor with structuring function.
+ */
 function writeOutPlayer(firstTurn) {
 	let nextPlayer = document.getElementById('player');
 	let nextPlayerText;
@@ -201,7 +206,7 @@ function writeOutPlayer(firstTurn) {
 	nextPlayer.style.color = nextPlayerColor;
 }
 
-/* Add one point to the winning player. */
+// Add one point to the winning player. 
 function setScoreCountWinner() {
 	let scorePlayerX = document.getElementById('scoresPlayerX').innerHTML;
 	let scorePlayerO = document.getElementById('scoresPlayerO').innerHTML;
@@ -214,7 +219,7 @@ function setScoreCountWinner() {
 	}
 }
 
-/* Add one point to draw. */
+// Add one point to draw.
 function setScoreCountDraw() {
 	let scoreDraw = document.getElementById('scoresDraw').innerHTML;
 	document.getElementById('scoresDraw').innerHTML = ++scoreDraw;
@@ -223,7 +228,7 @@ function setScoreCountDraw() {
 /**
  * Making buttons blink when someone wins.
  * Inspiration from: https://www.py4u.net/discuss/301230
- *  */
+ */
 function winBtnAnimation(btnA, btnB, btnC) {
 	winnerIntervalId = setInterval(function () {
 		btnA.style.backgroundColor = (btnA.style.backgroundColor == colorWinningBtns ? colorUnclickedBtns : colorWinningBtns);
@@ -234,7 +239,7 @@ function winBtnAnimation(btnA, btnB, btnC) {
 
 }
 
-/* Making button blink if game is draw. */
+// Making button blink if game is draw.
 function drawBtnAnimation() {
 	let btn1 = document.getElementById('btn-tile-1');
 	btn1.style.backgroundColor = colorWinningBtns;

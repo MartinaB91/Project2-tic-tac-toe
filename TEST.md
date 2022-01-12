@@ -49,7 +49,7 @@ Description: Function genrate random player.
 | Step | Description| Expected|
 | ----------- | ----------- |------------|
 |1.|   Refresh the page, check which player is 'Next player'.      |                                           |
-|2.|   Repeat step one five times. 'Next player' will be randomly displayed. |         |
+|2.|   Repeat step one five times. 'Next player' will be randomly displayed. | 'Next player' will be randomly displayed. |
 
 ## Responsiveness
 The design of the site is quite simmilar on all screen sizes. The biggest difference is that on small screen devices the start button is pushed down to make room for the rules. Therefore the tests conducted focused on that the site looks good and functions well on all screen sizes. 

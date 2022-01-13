@@ -1,59 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="keywords" content="Game, Tic tac toe">
-   <meta name="description" content="Play the classic game Tic Tac Toe with a friend.">
-   <!-- Stylesheet -->
-   <link rel="stylesheet" href="assets/css/style.css">
-   <!--Google Fonts  -->
-   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-   <title>Tic Tac Toe</title>
-   <!--Favicon-->
-   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-</head>
-
-<body>
-   <h1>Tic Tac Toe</h1>
-   <section id="game">
-      <button id="start-btn">START</button>
-      <div id="players-info">
-         <p id="players">Next: Player <span id="player"></span></p>
-      </div>
-      <div id="game-info">
-         <h2>Rules</h2>
-         <p id="game-info-text">
-            Here you can play the classical game Tic Tac Toe. To play this version of the game you need to play with a
-            friend on the same device. Your goal is to get three tiles in a row. It can be vertcial, horizontal or
-            diagonally. Good Luck!
-         </p>
-      </div>
-      <!--Game board buttons-->
-      <div id="board">
-         <button class="tile-btn" id="btn-tile-1" aria-label="tile one row one game board"></button>
-         <button class="tile-btn" id="btn-tile-2" aria-label="tile two row one game board"></button>
-         <button class="tile-btn" id="btn-tile-3" aria-label="tile three row one game board"></button>
-         <button class="tile-btn" id="btn-tile-4" aria-label="tile one row two game board"></button>
-         <button class="tile-btn" id="btn-tile-5" aria-label="tile two row two game board"></button>
-         <button class="tile-btn" id="btn-tile-6" aria-label="tile three row two game board"></button>
-         <button class="tile-btn" id="btn-tile-7" aria-label="tile one row three game board"></button>
-         <button class="tile-btn" id="btn-tile-8" aria-label="tile two row three game board"></button>
-         <button class="tile-btn" id="btn-tile-9" aria-label="tile three row three game board"></button>
-      </div>
-      <div id="score">
-         <p class="scores" id="scoreTextPlayerX">Player <span id="scoreTextX">X: </span><span id="scoresPlayerX">0</span>
-         </p>
-         <p class="scores">Draw <span id="scoresDraw">0</span></p>
-         <p class="scores" id="scoreTextPlayerO">Player <span id="scoreTextO">O: </span><span id="scoresPlayerO">0</span></p>
-      </div>
-   </section>
-   <!-- Javascript -->
-   <script src="assets/javascript/globals.js"></script>
-   <script src="assets/javascript/main.js"></script>
-   <!-- <script src="assets/javascript/utils.js"></script> -->
-</body>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="Game, Tic tac toe">
+      <meta name="description" content="Play the classic game Tic Tac Toe with a friend.">
+      <!-- Stylesheet -->
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!--Google Fonts  -->
+      <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+      <title>Tic Tac Toe</title>
+      <!--Favicon-->
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+   </head>
+   <body>
+      <h1>Tic Tac Toe</h1>
+      <section id="game">
+         <button id="start-btn">START</button>
+         <div id="players-info">
+            <p id="players">Next: Player <span id="player"></span></p>
+         </div>
+         <div id="game-info">
+            <h2>Rules</h2>
+            <p id="game-info-text">
+               Here you can play the classical game Tic Tac Toe. To play this version of the game you need to play with a
+               friend on the same device. Your goal is to get three tiles in a row. It can be vertcial, horizontal or
+               diagonally. Good Luck!
+            </p>
+         </div>
+         <!--Game board buttons-->
+         <div id="board">
+            <button class="tile-btn" id="btn-tile-1" aria-label="tile one row one game board"></button>
+            <button class="tile-btn" id="btn-tile-2" aria-label="tile two row one game board"></button>
+            <button class="tile-btn" id="btn-tile-3" aria-label="tile three row one game board"></button>
+            <button class="tile-btn" id="btn-tile-4" aria-label="tile one row two game board"></button>
+            <button class="tile-btn" id="btn-tile-5" aria-label="tile two row two game board"></button>
+            <button class="tile-btn" id="btn-tile-6" aria-label="tile three row two game board"></button>
+            <button class="tile-btn" id="btn-tile-7" aria-label="tile one row three game board"></button>
+            <button class="tile-btn" id="btn-tile-8" aria-label="tile two row three game board"></button>
+            <button class="tile-btn" id="btn-tile-9" aria-label="tile three row three game board"></button>
+         </div>
+         <div id="score">
+            <p class="scores" id="scoreTextPlayerX">Player <span id="scoreTextX">X: </span><span id="scoresPlayerX">0</span>
+            </p>
+            <p class="scores">Draw <span id="scoresDraw">0</span></p>
+            <p class="scores" id="scoreTextPlayerO">Player <span id="scoreTextO">O: </span><span id="scoresPlayerO">0</span></p>
+         </div>
+      </section>
+      <!-- Javascript -->
+      <script src="assets/javascript/globals.js"></script>
+      <script src="assets/javascript/main.js"></script>
+   </body>
 </html>

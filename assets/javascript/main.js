@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * Main function that calls other functions and desides the order they are executed in. 
+ * Main function that calls other functions and decides the order they are executed in. 
  * Main function is called every time a button on game board is clicked.
  */
 function gameBoardBtnClick() {
@@ -62,7 +62,7 @@ function changePlayer() {
 	}
 }
 
-// Checks all the differents ways the player can win to se if someone has won. 
+// Checks all the different ways the player can win, to se if someone has won. 
 function checkIfWin() {
 	let btn = document.getElementsByClassName('tile-btn');
 
@@ -105,8 +105,8 @@ function startGame() {
 
 	/** 
 	 * Removes the start button if it exists, if the start buttons is null 
-	 * (doesent't exist) remove the restart button. 
-	 * https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null
+	 * (does not exist) remove the restart button. 
+	 * Used as a guide: https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null
 	 */
 	if (startButton !== null) {
 		startButton.style.display = 'none';
@@ -126,13 +126,13 @@ function startGame() {
 		button.style.backgroundColor = colorUnclickedBtns;
 		/** 
 		 * Clear interval in winBtnAnimation function. Removes blinking effects.
-		 * Found solution on: https://www.w3schools.com/jsref/met_win_clearinterval.asp  
+		 * Used as guide: https://www.w3schools.com/jsref/met_win_clearinterval.asp  
 		 */
 		clearInterval(winnerIntervalId);
 		button.classList.remove('xBtn', 'oBtn');
 		/**
 		 * Removes classes xBtn and oBtn added in function setPlayerOnBtn.
-		 * Found solution : https://developer.mozilla.org/en-US/docs/Web/API/Element/classList. 
+		 * Used as guide: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList. 
 		 */
 	}
 
@@ -227,7 +227,7 @@ function setScoreCountDraw() {
 
 /**
  * Making buttons blink when someone wins.
- * Inspiration from: https://www.py4u.net/discuss/301230
+ * Used as guide: https://www.py4u.net/discuss/301230
  */
 function winBtnAnimation(btnA, btnB, btnC) {
 	winnerIntervalId = setInterval(function () {

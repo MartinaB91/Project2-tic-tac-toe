@@ -50,7 +50,6 @@ span {
 }
 
 #game-info {
-    /* background-color: rgba(165, 165, 141, 0.9); */
     background-color: #FFE8D6;
     border-radius: 0.5rem;
     border: 3px solid black;
@@ -170,11 +169,13 @@ span {
         width: 100%;
         border-radius: 0;
     }
+
     /* Styling div game */
     #game {
         width: 100%;
         border-radius: 0;
     }
+    
     /* Styling div info */
     #players-info {
         text-align: center;
@@ -192,6 +193,7 @@ span {
         border-radius: 0.5rem;
         top: -2%;
     }
+
     /*Styling game board */
     #board {
         width: 17rem;
@@ -216,7 +218,6 @@ span {
         font-size: 300%;
     }
 
-   
     /* Styling X and O game board text*/
     .xBtn {
         font-size: 300%;
@@ -227,11 +228,9 @@ span {
     }
 
     /* Styling div score */
-
     #scoreTextPlayerX {
         margin-right: 11%;
     }
-
 }
 
 /* Media queries for medium devices */

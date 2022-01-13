@@ -109,23 +109,24 @@ This section describes how the site was deployed. The project was deployed to Gi
 This section describes code, content and media and tools that were used when building this site. Special thanks to my mentor Reuben Ferrante for great ideas and support.
 
 ### Code
-[Developer drive – Grid system](https://www.developerdrive.com/how-to-create-a-css-grid-step-by-step ): Used as guide for building grid system for game board.
-
 [Codeinwp – Event listener](https://www.codeinwp.com/snippets/add-event-listener-to-multiple-elements-with-javascript/): Used as guide when adding event listeners.
+
+[Developer drive – Grid system](https://www.developerdrive.com/how-to-create-a-css-grid-step-by-step ): Used as guide for building grid system for game board.
 
 [Favicon](https://favicon.io/favicon-generator/): Used for creating favicon image.
 
 [Flexible – Disable buttons](https://flexiple.com/disable-button-javascript/): Used as guide for disabling buttons.
 
-[PY4U.NET - Text-flash](https://www.py4u.net/discuss/301230): Used as guide for making game board buttons blink when someone winns or the game is draw. 
+[MDN Web Docs – Element.classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList): Used as guide for removing earlier added classes from X and O buttons when restarting the game.
 
-[Youtube – Kevin Powell](https://www.youtube.com/watch?v=Yon4l3MUBGY): Used as guide for making box-shadow on gameboard and buttons. 
+[PY4U.NET - Text-flash](https://www.py4u.net/discuss/301230): Used as guide for making game board buttons blink when someone winns or the game is draw. 
 
 [Stackoverflow – undefined or null](https://stackoverflow.com/questions/2647867/how-can-i-determine-if-a-variable-is-undefined-or-null): Used as guide for checking if null.
 
 [w3school - Clear interval](https://www.w3schools.com/jsref/met_win_clearinterval.asp): Used as guide for removing blinking effects on game board buttons when restarting the game. 
 
-[MDN Web Docs – Element.classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList): Used as guide for removing earlier added classes from X and O buttons when restarting the game.
+[Youtube – Kevin Powell](https://www.youtube.com/watch?v=Yon4l3MUBGY): Used as guide for making box-shadow on gameboard and buttons. 
+
 ### Content and media
 [Google fonts](https://fonts.google.com/): Used for all text. 
 

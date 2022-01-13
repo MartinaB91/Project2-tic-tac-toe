@@ -1,5 +1,5 @@
 # Test and validations
-In this document performed tests and validations are described. Initially the functional test cases will be presented and later on the sites responsiveness and valdiations. 
+In this document performed tests and validations are described. Initially the functional test cases will be presented and later on the sites responsiveness and validations. 
 ## Test cases
 ### Test case 1
 
@@ -46,16 +46,16 @@ Description: Function write out player/next player and put player to button.
 |2.| Press any game board button. |   Game board button is claimed by current player and 'Next player' will change to the player that's next in line.  |
 |3.| Press another game board button. |  Game board button is claimed by current player and 'Next player' will change back to the player that started the game. |
 ### Test case 6
-Description: Function genrate random player.
+Description: Function generate random player.
 | Step | Description| Expected|
 | ----------- | ----------- |------------|
 |1.|   Refresh the page, check which player is 'Next player'.      |                                           |
 |2.|   Repeat step one five times. 'Next player' will be randomly displayed. | 'Next player' will be randomly displayed. |
 
 ## Responsiveness
-The design of the site is quite simmilar on all screen sizes. The biggest difference is that on small screen devices the start button is pushed down to make room for the rules. Therefore the tests conducted focused on that the site looks good and functions well on all screen sizes. 
+The design of the site is quite similar on all screen sizes. The biggest difference is that on small screen devices the start button is pushed down to make room for the rules. Therefore the tests conducted focused on that the site looks good and functions well on all screen sizes. 
 
-The game has been played on small devices(Samsung galaxy s10,s20 och s20 Ultra), medium devices (iPad),large external screen(X) and large laptop(X) to check that everything looks and function as expected. 
+The game has been played on small devices(Samsung Galaxy s10, s20 and s20 Ultra), medium devices (iPad), large external screen(23") and laptop(15") to check that everything looks and functions as expected. 
 ## Test results 
 | Step	 | Chrome  | Chrome mobile | Opera | Edge |
 |--------|---------|---------|---------|-----------|

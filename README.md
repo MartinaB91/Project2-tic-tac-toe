@@ -1,6 +1,6 @@
 # Tic Tac Toe
 ## Introduction
-This page contains a version of the classic game Tic Tac Toe. The game is played on a three-by-three board and X plays against O and the winner is the one with three in a row. Here to players can play against each other on the same device, perhaps suiting colleagues playing on the coffee break.
+This page contains a version of the classic game Tic Tac Toe. The game is played on a three-by-three board and X plays against O and the winner is the one with three in a row. Here two players can play against each other on the same device, perhaps suiting colleagues playing on the coffee break.
 
 <img src="assets/readme-images/amiresponsive.PNG" width= 90%>
 
@@ -11,8 +11,8 @@ In this section the user experience and design of the site is discussed. Many ot
 - As a user I want to quickly understand the sites purpose to see if this is this site have what im looking for.
 - As a user I want to quickly understand how the game works to know how to play it.
 - As a user I want it to be easy to start playing, so i don't have to waste time. 
-- As a user I want it to be easy to see when it's my turn, so idon't have to keep track on my own.
-- As a user I want it to know the score, so I know who's winning.
+- As a user I want it to be easy to see when it's my turn, so i don't have to keep track on my own.
+- As a user I want to know the score, so I know who's winning.
 ### Color-scheme
 - The colors chosen for the game is tones of green, beige and brown. These earthy colors combined with the background image of a forest gives the user a peaceful experience while playing.
 
@@ -22,13 +22,13 @@ In this section the user experience and design of the site is discussed. Many ot
 
 
 ### Typography
-For typography ‘Shadows into light’ witch fallback cursive is used. This style stands out while not stealing focus. 
+For typography ‘Shadows into light’ with fallback cursive is used. This style stands out while not stealing focus. 
 ### Wireframe
 
 <img src="assets/readme-images/wireframe.jpg">
 
 ## Features
-In this section you will find out more about the different features this site contains. All features is located in the ”box”. This design were choosen to give the site a clean design and make the game blend with the background. This also make it easier for the user to see all the features. 
+In this section you will find out more about the different features this site contains. All features is located in the ”box”. This design was choosen to give the site a clean design and make the game blend with the background. This also makes it easier for the user to see all the features. 
 ### Tic Tac Toe header
 - The header of the page is centered at the top of the page, this will be the first thing the user sees. Since Tic Tac Toe is a well-known classic game the user will instantly understand the purpose of the site.
 
@@ -81,7 +81,7 @@ In this section you will find out more about the different features this site co
 Read more about test and validation [here](/TEST.md)
 ## Bugs corrections and improvements
 ### Unfixed bugs
-- There are no known bugs
+- There are no known bugs.
 ### Solved bugs 
 - Bug when the need for individual styling of start button occured. The same button is used for start and restart game but the placement of the button is different because of the size of the button. Start/Restart needs different styling to be placed in the center of the game board. When added a new id, the restart button was always visible. Solved by adding if-statements that checks if button is null or not depending on the id.
 

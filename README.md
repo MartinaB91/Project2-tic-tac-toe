@@ -87,7 +87,10 @@ Read more about test and validation [here](/TEST.md)
 
 - Bug blinking animation when winning. When the game has finished the blinking animation could change pattern if the user clicked a tile that have not been clicked. Solved by disabeling all buttons when someone has won. 
 
-- Chrome Devtools report the following error: "https://8000-teal-squirrel-aamz0q95.ws-eu25.gitpod.io/favicon.ico 404." . Solved by adding a favicon that is in png format. 
+- Chrome Devtools report the following error: "https://8000-teal-squirrel-aamz0q95.ws-eu25.gitpod.io/favicon.ico 404." . Solved by adding a favicon that is in png format.
+
+- Bug when scores goes from single digit to double digit. The score text of player O was pushed out of the game board when number goes from single digit to double. Solved by changing styling of paragraphs in score area. 
+
 ### Future improvements
 - In this version of the game only two players on the same device are supported. In the future adding the possibility to play against the computer would give the users more ways to enjoy the game.
 

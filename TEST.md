@@ -1,4 +1,5 @@
 # Test and validations
+In this document performed tests and validations are described. Initially the functional test cases will be presented and later on the sites responsiveness and valdiations. 
 ## Test cases
 ### Test case 1
 
@@ -54,16 +55,17 @@ Description: Function genrate random player.
 ## Responsiveness
 The design of the site is quite simmilar on all screen sizes. The biggest difference is that on small screen devices the start button is pushed down to make room for the rules. Therefore the tests conducted focused on that the site looks good and functions well on all screen sizes. 
 
-The game has been played on small devices(iPhone 5), medium devices (iPad),large external screen(X) and large laptop(X) to check that everything looks and function as expected. 
+The game has been played on small devices(Samsung galaxy s10,s20 och s20 Ultra), medium devices (iPad),large external screen(X) and large laptop(X) to check that everything looks and function as expected. 
 ## Test results 
-| Step	 | Chrome  | Edge    | Opera   |
-|--------|---------|---------|---------|
-| Test 1 |     |     |     | 
-| Test 2 |     |     |     |
-| Test 3 |     |     |     |
-| Test 4 |     |     |     |
-| Test 5 |     |     |     |
-| Test 6 |     |     |     |
+| Step	 | Chrome  | Chrome mobile | Opera | Edge |
+|--------|---------|---------|---------|-----------|
+| Test 1 |  ✅  |   ✅  |  ✅  |  ✅     |
+| Test 1 |  ✅  |   ✅  |  ✅  |  ✅     |
+| Test 2 |  ✅  |   ✅  |  ✅  |  ✅     |
+| Test 3 |  ✅  |   ✅  |  ✅  |  ✅     |
+| Test 4 |  ✅  |   ✅  |  ✅  |  ✅     |
+| Test 5 |  ✅  |   ✅  |  ✅  |  ✅     |
+| Test 6 |  ✅  |   ✅  |  ✅  |  ✅     |
 
 ## Validations 
 The CSS, HMTL and Javascript has been validated without any errors or warnings.
